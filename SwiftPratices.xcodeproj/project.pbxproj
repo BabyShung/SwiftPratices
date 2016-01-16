@@ -14,6 +14,8 @@
 		B803DC731C49F6060003F43D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B803DC711C49F6060003F43D /* LaunchScreen.storyboard */; };
 		B803DC7E1C49F6060003F43D /* SwiftPraticesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC7D1C49F6060003F43D /* SwiftPraticesTests.swift */; };
 		B803DC891C49F6060003F43D /* SwiftPraticesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC881C49F6060003F43D /* SwiftPraticesUITests.swift */; };
+		B803DC991C49F62E0003F43D /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC981C49F62E0003F43D /* Triangle.swift */; };
+		B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC9C1C4A02730003F43D /* TriangleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		B803DC841C49F6060003F43D /* SwiftPraticesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftPraticesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B803DC881C49F6060003F43D /* SwiftPraticesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPraticesUITests.swift; sourceTree = "<group>"; };
 		B803DC8A1C49F6060003F43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B803DC981C49F62E0003F43D /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		B803DC9C1C4A02730003F43D /* TriangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		B803DC671C49F6060003F43D /* SwiftPratices */ = {
 			isa = PBXGroup;
 			children = (
+				B803DC961C49F6260003F43D /* Algo */,
 				B803DC681C49F6060003F43D /* AppDelegate.swift */,
 				B803DC6A1C49F6060003F43D /* ViewController.swift */,
 				B803DC6C1C49F6060003F43D /* Main.storyboard */,
@@ -110,6 +115,7 @@
 		B803DC7C1C49F6060003F43D /* SwiftPraticesTests */ = {
 			isa = PBXGroup;
 			children = (
+				B803DC9A1C4A02620003F43D /* Algo */,
 				B803DC7D1C49F6060003F43D /* SwiftPraticesTests.swift */,
 				B803DC7F1C49F6060003F43D /* Info.plist */,
 			);
@@ -123,6 +129,38 @@
 				B803DC8A1C49F6060003F43D /* Info.plist */,
 			);
 			path = SwiftPraticesUITests;
+			sourceTree = "<group>";
+		};
+		B803DC961C49F6260003F43D /* Algo */ = {
+			isa = PBXGroup;
+			children = (
+				B803DC971C49F6260003F43D /* DP */,
+			);
+			path = Algo;
+			sourceTree = "<group>";
+		};
+		B803DC971C49F6260003F43D /* DP */ = {
+			isa = PBXGroup;
+			children = (
+				B803DC981C49F62E0003F43D /* Triangle.swift */,
+			);
+			path = DP;
+			sourceTree = "<group>";
+		};
+		B803DC9A1C4A02620003F43D /* Algo */ = {
+			isa = PBXGroup;
+			children = (
+				B803DC9B1C4A02620003F43D /* DP */,
+			);
+			path = Algo;
+			sourceTree = "<group>";
+		};
+		B803DC9B1C4A02620003F43D /* DP */ = {
+			isa = PBXGroup;
+			children = (
+				B803DC9C1C4A02730003F43D /* TriangleTests.swift */,
+			);
+			path = DP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B803DC991C49F62E0003F43D /* Triangle.swift in Sources */,
 				B803DC6B1C49F6060003F43D /* ViewController.swift in Sources */,
 				B803DC691C49F6060003F43D /* AppDelegate.swift in Sources */,
 			);
@@ -266,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B803DC7E1C49F6060003F43D /* SwiftPraticesTests.swift in Sources */,
+				B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
