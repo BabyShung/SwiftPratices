@@ -16,6 +16,8 @@
 		B803DC891C49F6060003F43D /* SwiftPraticesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC881C49F6060003F43D /* SwiftPraticesUITests.swift */; };
 		B803DC991C49F62E0003F43D /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC981C49F62E0003F43D /* Triangle.swift */; };
 		B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC9C1C4A02730003F43D /* TriangleTests.swift */; };
+		B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */; };
+		B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		B803DC8A1C49F6060003F43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B803DC981C49F62E0003F43D /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		B803DC9C1C4A02730003F43D /* TriangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
+		B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSum.swift; sourceTree = "<group>"; };
+		B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSumTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B803DC981C49F62E0003F43D /* Triangle.swift */,
+				B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				B803DC9C1C4A02730003F43D /* TriangleTests.swift */,
+				B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B803DC991C49F62E0003F43D /* Triangle.swift in Sources */,
+				B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */,
 				B803DC6B1C49F6060003F43D /* ViewController.swift in Sources */,
 				B803DC691C49F6060003F43D /* AppDelegate.swift in Sources */,
 			);
@@ -305,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B803DC7E1C49F6060003F43D /* SwiftPraticesTests.swift in Sources */,
+				B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */,
 				B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +532,7 @@
 				B803DC8F1C49F6060003F43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B803DC901C49F6060003F43D /* Build configuration list for PBXNativeTarget "SwiftPraticesTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +541,7 @@
 				B803DC921C49F6060003F43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B803DC931C49F6060003F43D /* Build configuration list for PBXNativeTarget "SwiftPraticesUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +550,7 @@
 				B803DC951C49F6060003F43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
