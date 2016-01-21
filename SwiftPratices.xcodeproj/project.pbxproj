@@ -18,6 +18,8 @@
 		B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC9C1C4A02730003F43D /* TriangleTests.swift */; };
 		B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */; };
 		B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */; };
+		B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */; };
+		B869FE4E1C50978300DD7CE5 /* UniquePathsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		B803DC9C1C4A02730003F43D /* TriangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
 		B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSum.swift; sourceTree = "<group>"; };
 		B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSumTests.swift; sourceTree = "<group>"; };
+		B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePaths.swift; sourceTree = "<group>"; };
+		B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePathsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,7 @@
 			children = (
 				B803DC981C49F62E0003F43D /* Triangle.swift */,
 				B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */,
+				B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			children = (
 				B803DC9C1C4A02730003F43D /* TriangleTests.swift */,
 				B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */,
+				B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			files = (
 				B803DC991C49F62E0003F43D /* Triangle.swift in Sources */,
 				B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */,
+				B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */,
 				B803DC6B1C49F6060003F43D /* ViewController.swift in Sources */,
 				B803DC691C49F6060003F43D /* AppDelegate.swift in Sources */,
 			);
@@ -314,6 +321,7 @@
 				B803DC7E1C49F6060003F43D /* SwiftPraticesTests.swift in Sources */,
 				B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */,
 				B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */,
+				B869FE4E1C50978300DD7CE5 /* UniquePathsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
