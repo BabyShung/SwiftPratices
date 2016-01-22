@@ -33,6 +33,22 @@ class UniquePathsTests: XCTestCase {
         XCTAssertEqual(1, instance.uniquePath(1, n: 99))
         XCTAssertEqual(2, instance.uniquePath(2, n: 2))
     }
+    
+    func testUniquePathsII() {
+        let instance = UniquePaths()
+        let gird = [
+                        [0, 1, 0],
+                        [0, 0, 0],
+                        [1, 0, 0]
+        ]
+        let gird1 = [
+            [1, 1, 0],
+            [0, 0, 0],
+            [1, 0, 0]
+        ]
+        XCTAssertEqual(2, instance.uniquePathII(gird))
+        XCTAssertEqual(0, instance.uniquePathII(gird1))
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

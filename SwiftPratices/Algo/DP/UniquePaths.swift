@@ -32,4 +32,38 @@ class UniquePaths {
         return f[m - 1][n - 1]
     }
     
+    func uniquePathII(obstacleGrid: [[Int]]) -> Int {
+        
+        //init
+        let m = obstacleGrid.count
+        let n = obstacleGrid[0].count
+        var f = Array(count: m, repeatedValue: Array(count: n, repeatedValue: 0))
+        
+        for i in 0 ..< m {
+            if obstacleGrid[i][0] == 1 {
+                break
+            }
+            f[i][0] = 1
+        }
+        
+        for j in 0 ..< n {
+            if obstacleGrid[0][j] == 1 {
+                break
+            }
+            f[0][j] = 1
+        }
+        
+        for i in 1 ..< m {
+            for j in 1 ..< n {
+                if obstacleGrid[i][j] == 1 {
+                    f[i][j] = 0
+                } else {
+                    f[i][j] = f[i - 1][j] + f[i][j - 1]
+                }
+            }
+        }
+        
+        return f[m - 1][n - 1]
+    }
+    
 }
