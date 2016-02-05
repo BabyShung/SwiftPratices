@@ -21,7 +21,7 @@ class JumpGameTests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testJumpGame() {
         var nums = [2, 3, 0, 0, 9]
         let instance = JumpGame()
         XCTAssertTrue(instance.jumpGame(nums), "Can jump")
@@ -29,6 +29,15 @@ class JumpGameTests: XCTestCase {
         nums = [2, 3, 0, 0, 0, 8]
         XCTAssertFalse(instance.jumpGame(nums), "Can't jump")
         
+    }
+    
+    func testJumpGameII() {
+        var nums = [2, 3, 0, 0, 9]
+        let instance = JumpGame()
+        XCTAssertEqual(2, instance.jumpGameII(nums), "min 2 steps")
+        
+        nums = [7, 3, 0, 0, 0, 8]
+        XCTAssertEqual(1, instance.jumpGameII(nums), "min 1 steps")
     }
 
     func testPerformanceExample() {
