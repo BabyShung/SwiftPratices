@@ -22,6 +22,8 @@
 		B869FE4E1C50978300DD7CE5 /* UniquePathsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */; };
 		B87EA6471C62F60800C109F8 /* JumpGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87EA6461C62F60800C109F8 /* JumpGame.swift */; };
 		B87EA6491C62F78C00C109F8 /* JumpGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */; };
+		B8D10B571C65A62800BBDD6A /* ClimbingStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */; };
+		B8D10B591C65A8B500BBDD6A /* ClimbingStairsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePathsTests.swift; sourceTree = "<group>"; };
 		B87EA6461C62F60800C109F8 /* JumpGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGame.swift; sourceTree = "<group>"; };
 		B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGameTests.swift; sourceTree = "<group>"; };
+		B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairs.swift; sourceTree = "<group>"; };
+		B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +162,7 @@
 				B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */,
 				B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */,
 				B87EA6461C62F60800C109F8 /* JumpGame.swift */,
+				B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */,
 				B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */,
 				B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */,
+				B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */,
 			);
 			path = DP;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			files = (
 				B803DC991C49F62E0003F43D /* Triangle.swift in Sources */,
 				B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */,
+				B8D10B571C65A62800BBDD6A /* ClimbingStairs.swift in Sources */,
 				B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */,
 				B803DC6B1C49F6060003F43D /* ViewController.swift in Sources */,
 				B803DC691C49F6060003F43D /* AppDelegate.swift in Sources */,
@@ -327,6 +334,7 @@
 			files = (
 				B803DC7E1C49F6060003F43D /* SwiftPraticesTests.swift in Sources */,
 				B87EA6491C62F78C00C109F8 /* JumpGameTests.swift in Sources */,
+				B8D10B591C65A8B500BBDD6A /* ClimbingStairsTests.swift in Sources */,
 				B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */,
 				B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */,
 				B869FE4E1C50978300DD7CE5 /* UniquePathsTests.swift in Sources */,
