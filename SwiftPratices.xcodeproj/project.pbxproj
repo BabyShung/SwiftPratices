@@ -16,6 +16,7 @@
 		B803DC891C49F6060003F43D /* SwiftPraticesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC881C49F6060003F43D /* SwiftPraticesUITests.swift */; };
 		B803DC991C49F62E0003F43D /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC981C49F62E0003F43D /* Triangle.swift */; };
 		B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC9C1C4A02730003F43D /* TriangleTests.swift */; };
+		B82BAB781D0682FB003ECE7E /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */; };
 		B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */; };
 		B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */; };
 		B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */; };
@@ -24,6 +25,7 @@
 		B87EA6491C62F78C00C109F8 /* JumpGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */; };
 		B8D10B571C65A62800BBDD6A /* ClimbingStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */; };
 		B8D10B591C65A8B500BBDD6A /* ClimbingStairsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */; };
+		B8D4E1141D067D1F000AA11B /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4E1131D067D1F000AA11B /* BinarySearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,7 @@
 		B803DC8A1C49F6060003F43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B803DC981C49F62E0003F43D /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		B803DC9C1C4A02730003F43D /* TriangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
+		B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSum.swift; sourceTree = "<group>"; };
 		B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSumTests.swift; sourceTree = "<group>"; };
 		B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePaths.swift; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGameTests.swift; sourceTree = "<group>"; };
 		B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairs.swift; sourceTree = "<group>"; };
 		B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
+		B8D4E1131D067D1F000AA11B /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 		B803DC961C49F6260003F43D /* Algo */ = {
 			isa = PBXGroup;
 			children = (
+				B8D4E1121D067C54000AA11B /* BinarySearch */,
 				B803DC971C49F6260003F43D /* DP */,
 			);
 			path = Algo;
@@ -170,6 +175,7 @@
 		B803DC9A1C4A02620003F43D /* Algo */ = {
 			isa = PBXGroup;
 			children = (
+				B8D4E1151D067E6E000AA11B /* BinarySearch */,
 				B803DC9B1C4A02620003F43D /* DP */,
 			);
 			path = Algo;
@@ -185,6 +191,22 @@
 				B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */,
 			);
 			path = DP;
+			sourceTree = "<group>";
+		};
+		B8D4E1121D067C54000AA11B /* BinarySearch */ = {
+			isa = PBXGroup;
+			children = (
+				B8D4E1131D067D1F000AA11B /* BinarySearch.swift */,
+			);
+			path = BinarySearch;
+			sourceTree = "<group>";
+		};
+		B8D4E1151D067E6E000AA11B /* BinarySearch */ = {
+			isa = PBXGroup;
+			children = (
+				B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */,
+			);
+			path = BinarySearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8D4E1141D067D1F000AA11B /* BinarySearch.swift in Sources */,
 				B803DC991C49F62E0003F43D /* Triangle.swift in Sources */,
 				B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */,
 				B8D10B571C65A62800BBDD6A /* ClimbingStairs.swift in Sources */,
@@ -333,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B803DC7E1C49F6060003F43D /* SwiftPraticesTests.swift in Sources */,
+				B82BAB781D0682FB003ECE7E /* BinarySearchTests.swift in Sources */,
 				B87EA6491C62F78C00C109F8 /* JumpGameTests.swift in Sources */,
 				B8D10B591C65A8B500BBDD6A /* ClimbingStairsTests.swift in Sources */,
 				B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */,
