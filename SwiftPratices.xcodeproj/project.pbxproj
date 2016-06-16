@@ -17,6 +17,8 @@
 		B803DC991C49F62E0003F43D /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC981C49F62E0003F43D /* Triangle.swift */; };
 		B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B803DC9C1C4A02730003F43D /* TriangleTests.swift */; };
 		B82BAB781D0682FB003ECE7E /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */; };
+		B840EBE41D10FAD9008F8A40 /* SearchInsertPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B840EBE31D10FAD8008F8A40 /* SearchInsertPosition.swift */; };
+		B840EBE61D10FC0D008F8A40 /* SearchInsertPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B840EBE51D10FC0D008F8A40 /* SearchInsertPositionTests.swift */; };
 		B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */; };
 		B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */; };
 		B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */; };
@@ -62,6 +64,8 @@
 		B803DC981C49F62E0003F43D /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		B803DC9C1C4A02730003F43D /* TriangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
 		B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
+		B840EBE31D10FAD8008F8A40 /* SearchInsertPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInsertPosition.swift; sourceTree = "<group>"; };
+		B840EBE51D10FC0D008F8A40 /* SearchInsertPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInsertPositionTests.swift; sourceTree = "<group>"; };
 		B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSum.swift; sourceTree = "<group>"; };
 		B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSumTests.swift; sourceTree = "<group>"; };
 		B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePaths.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				B8D4E1131D067D1F000AA11B /* BinarySearch.swift */,
+				B840EBE31D10FAD8008F8A40 /* SearchInsertPosition.swift */,
 			);
 			path = BinarySearch;
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */,
+				B840EBE51D10FC0D008F8A40 /* SearchInsertPositionTests.swift */,
 			);
 			path = BinarySearch;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */,
 				B803DC6B1C49F6060003F43D /* ViewController.swift in Sources */,
 				B803DC691C49F6060003F43D /* AppDelegate.swift in Sources */,
+				B840EBE41D10FAD9008F8A40 /* SearchInsertPosition.swift in Sources */,
 				B87EA6471C62F60800C109F8 /* JumpGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +367,7 @@
 				B87EA6491C62F78C00C109F8 /* JumpGameTests.swift in Sources */,
 				B8D10B591C65A8B500BBDD6A /* ClimbingStairsTests.swift in Sources */,
 				B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */,
+				B840EBE61D10FC0D008F8A40 /* SearchInsertPositionTests.swift in Sources */,
 				B803DC9D1C4A02730003F43D /* TriangleTests.swift in Sources */,
 				B869FE4E1C50978300DD7CE5 /* UniquePathsTests.swift in Sources */,
 			);
@@ -496,6 +504,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftPratices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planhola.SwiftPratices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SwiftPratices/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.planhola.SwiftPratices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
