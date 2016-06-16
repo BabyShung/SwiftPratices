@@ -25,6 +25,8 @@
 		B869FE4E1C50978300DD7CE5 /* UniquePathsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */; };
 		B87EA6471C62F60800C109F8 /* JumpGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87EA6461C62F60800C109F8 /* JumpGame.swift */; };
 		B87EA6491C62F78C00C109F8 /* JumpGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */; };
+		B89BA2461D123BAE00C3A078 /* Search2DMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89BA2451D123BAE00C3A078 /* Search2DMatrix.swift */; };
+		B89BA2481D123FD600C3A078 /* Search2DMatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89BA2471D123FD600C3A078 /* Search2DMatrixTests.swift */; };
 		B8D10B571C65A62800BBDD6A /* ClimbingStairs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */; };
 		B8D10B591C65A8B500BBDD6A /* ClimbingStairsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */; };
 		B8D4E1141D067D1F000AA11B /* BinarySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D4E1131D067D1F000AA11B /* BinarySearch.swift */; };
@@ -72,6 +74,8 @@
 		B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePathsTests.swift; sourceTree = "<group>"; };
 		B87EA6461C62F60800C109F8 /* JumpGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGame.swift; sourceTree = "<group>"; };
 		B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGameTests.swift; sourceTree = "<group>"; };
+		B89BA2451D123BAE00C3A078 /* Search2DMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search2DMatrix.swift; sourceTree = "<group>"; };
+		B89BA2471D123FD600C3A078 /* Search2DMatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search2DMatrixTests.swift; sourceTree = "<group>"; };
 		B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairs.swift; sourceTree = "<group>"; };
 		B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
 		B8D4E1131D067D1F000AA11B /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 			children = (
 				B8D4E1131D067D1F000AA11B /* BinarySearch.swift */,
 				B840EBE31D10FAD8008F8A40 /* SearchInsertPosition.swift */,
+				B89BA2451D123BAE00C3A078 /* Search2DMatrix.swift */,
 			);
 			path = BinarySearch;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			children = (
 				B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */,
 				B840EBE51D10FC0D008F8A40 /* SearchInsertPositionTests.swift */,
+				B89BA2471D123FD600C3A078 /* Search2DMatrixTests.swift */,
 			);
 			path = BinarySearch;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				B8D10B571C65A62800BBDD6A /* ClimbingStairs.swift in Sources */,
 				B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */,
 				B803DC6B1C49F6060003F43D /* ViewController.swift in Sources */,
+				B89BA2461D123BAE00C3A078 /* Search2DMatrix.swift in Sources */,
 				B803DC691C49F6060003F43D /* AppDelegate.swift in Sources */,
 				B840EBE41D10FAD9008F8A40 /* SearchInsertPosition.swift in Sources */,
 				B87EA6471C62F60800C109F8 /* JumpGame.swift in Sources */,
@@ -362,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89BA2481D123FD600C3A078 /* Search2DMatrixTests.swift in Sources */,
 				B803DC7E1C49F6060003F43D /* SwiftPraticesTests.swift in Sources */,
 				B82BAB781D0682FB003ECE7E /* BinarySearchTests.swift in Sources */,
 				B87EA6491C62F78C00C109F8 /* JumpGameTests.swift in Sources */,
