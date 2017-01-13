@@ -1,7 +1,7 @@
 
 class ClimbingStairs {
     
-    func climbStairs(n: Int) -> Int {
+    func climbStairs(_ n: Int) -> Int {
         //state: f[n] means the distinct ways you jump from 0 to n
         //function: f[n] = f[n - 1] + f[n - 2]
         //init f[0] = 0, f[1] = 1, f[2] = 2
@@ -10,7 +10,7 @@ class ClimbingStairs {
         if (n < 1) {
             return 0
         }
-        var f = Array(count: n, repeatedValue: 0)
+        var f = Array(repeating: 0, count: n)
         f[0] = 1
         f[1] = 2
         for i in 2 ..< n {
@@ -19,7 +19,7 @@ class ClimbingStairs {
         return f[n - 1]
     }
     
-    func climbStairsImproved(n: Int) -> Int {
+    func climbStairsImproved(_ n: Int) -> Int {
         if (n < 1) {
             return 0
         }

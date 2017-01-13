@@ -1,7 +1,7 @@
 
 class Search2DMatrix {
-    func search(matrix: [[Int]]?, target: Int) -> Bool {
-        guard let mtx = matrix where mtx.count > 0 else {
+    func search(_ matrix: [[Int]]?, target: Int) -> Bool {
+        guard let mtx = matrix, mtx.count > 0 else {
             return false
         }
         

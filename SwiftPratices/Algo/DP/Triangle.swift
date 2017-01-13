@@ -7,18 +7,18 @@ class Triangle {
      remember to initialize diagonal values and first column
      */
     
-    func minimalPathSum(triangle: [[Int]?]?) -> Int {
-        guard let outer = triangle where outer.count != 0 else {
+    func minimalPathSum(_ triangle: [[Int]?]?) -> Int {
+        guard let outer = triangle, outer.count != 0 else {
             return 0
         }
         
-        guard let inner = triangle![0] where inner.count != 0 else {
+        guard let inner = triangle![0], inner.count != 0 else {
             return 0
         }
         
         //init
         let n = outer.count
-        var f = Array(count: n, repeatedValue: Array(count: n, repeatedValue: 0))
+        var f = Array(repeating: Array(repeating: 0, count: n), count: n)
         f[0][0] = outer[0]![0]
         
         for i in 1 ..< n {

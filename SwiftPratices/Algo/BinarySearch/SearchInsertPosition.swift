@@ -1,7 +1,7 @@
 
 class SearchInsertPosition {
-    func searchInsertPosition(array: [Int]?, target: Int) -> Int {
-        guard let arr = array where arr.count > 0 else {
+    func searchInsertPosition(_ array: [Int]?, target: Int) -> Int {
+        guard let arr = array, arr.count > 0 else {
             return 0
         }
         

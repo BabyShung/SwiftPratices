@@ -8,9 +8,9 @@
 
 class JumpGame {
     
-    func jumpGame(nums: [Int]) -> Bool {
+    func jumpGame(_ nums: [Int]) -> Bool {
         
-        var f:[Bool] = [Bool](count: nums.count, repeatedValue: false)
+        var f:[Bool] = [Bool](repeating: false, count: nums.count)
         f[0] = true
         
         for i in 1 ..< nums.count {
@@ -24,13 +24,13 @@ class JumpGame {
         return f[nums.count - 1]
     }
     
-    func jumpGameII(nums: [Int]) -> Int {
+    func jumpGameII(_ nums: [Int]) -> Int {
         //state: f[i] means the minimum steps jump from index 0 to i
         //function: f[i] = Min(f[j] + 1), where j < i && j can jump to i
         //init: f[0] = 0
         //result: f[i]
         
-        var f:[Int] = [Int](count: nums.count, repeatedValue: Int.max)
+        var f:[Int] = [Int](repeating: Int.max, count: nums.count)
         f[0] = 0
         
         for i in 1 ..< nums.count {

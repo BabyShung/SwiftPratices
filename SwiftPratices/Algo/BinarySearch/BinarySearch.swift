@@ -1,8 +1,8 @@
 
 class BinarySearch {
     
-    func binarySearch(nums: [Int]?, target: Int) -> Int {
-        guard let nums = nums where nums.count > 0 else {
+    func binarySearch(_ nums: [Int]?, target: Int) -> Int {
+        guard let nums = nums, nums.count > 0 else {
             return -1
         }
         var start = 0, end = nums.count - 1

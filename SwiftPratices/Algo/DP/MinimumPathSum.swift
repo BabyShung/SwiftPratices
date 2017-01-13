@@ -8,7 +8,7 @@
 
 class MinimumPathSum {
     
-    func minPathSum(grid: [[Int]]) -> Int {
+    func minPathSum(_ grid: [[Int]]) -> Int {
         
 //        guard let grid = grid where grid.count != 0 else {
 //            return 0
@@ -21,7 +21,7 @@ class MinimumPathSum {
         //initialze
         let rows = grid.count
         let columns = grid[0].count
-        var f = Array(count: rows, repeatedValue: Array(count: columns, repeatedValue: 0))
+        var f = Array(repeating: Array(repeating: 0, count: columns), count: rows)
         
         f[0][0] = grid[0][0]
         
