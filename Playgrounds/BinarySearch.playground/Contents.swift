@@ -78,3 +78,48 @@ func firstPosition(nums: [Int], target: Int) -> Int {
         return -1
     }
 }
+
+//what's the brute force way?
+//find the shortest & longest wood
+//for (int i = sLens; i <= lLens; i++)
+//count the wood pieces and compare k
+//O(n) + O(L) * O(n)
+
+//use binarySearch
+//1. find the longest one - O(n)
+//2. on this longest one, do binarySearch (cut half)
+//3.In the condition, check if this new length can get >= k pieces - O(n)
+//total O(n) + O(log(longestWoodLen)) * O(n)
+func woodCut(L: [Int], k: Int) -> Int {
+    guard L.count > 0, k > 0 else {
+        return 0
+    }
+    var maxLen: Int = 0
+    for cur in L {
+        maxLen = max(maxLen, cur)
+    }
+    var start = 1, end = maxLen
+    while start + 1 < end {
+        let mid = start + (end - start) / 2
+        if countWoodPieces(L, mid) >= k {
+            start = mid
+        } else {
+            end = mid
+        }
+    }
+    if countWoodPieces(L, end) >= k {
+        return end
+    } else if countWoodPieces(L, start) >= k {
+        return start
+    } else {
+        return 0
+    }
+}
+
+private func countWoodPieces(_ L: [Int], _ len: Int) -> Int {
+    var count = 0
+    for cur in L {
+        count += cur / len
+    }
+    return count
+}
