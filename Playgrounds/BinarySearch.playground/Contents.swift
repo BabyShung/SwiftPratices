@@ -123,3 +123,31 @@ private func countWoodPieces(_ L: [Int], _ len: Int) -> Int {
     }
     return count
 }
+
+//LEC 153
+func findMin(_ nums: [Int]) -> Int {
+    guard nums.count > 0 else {
+        return -1
+    }
+    var start = 0, end = nums.count - 1
+    let target = nums[end]
+    while start + 1 < end {
+        let mid = start + (end - start) / 2
+        if nums[mid] <= target {
+            end = mid
+        } else {
+            start = mid
+        }
+    }
+    if nums[start] > nums[end] {
+        return nums[end]
+    } else {
+        return nums[start]
+    }
+}
+
+
+
+
+
+
