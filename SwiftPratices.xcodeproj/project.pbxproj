@@ -76,6 +76,7 @@
 		B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGameTests.swift; sourceTree = "<group>"; };
 		B89BA2451D123BAE00C3A078 /* Search2DMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search2DMatrix.swift; sourceTree = "<group>"; };
 		B89BA2471D123FD600C3A078 /* Search2DMatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search2DMatrixTests.swift; sourceTree = "<group>"; };
+		B8B411DF1E290B56003EB7E5 /* Strstr.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Strstr.playground; sourceTree = "<group>"; };
 		B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairs.swift; sourceTree = "<group>"; };
 		B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
 		B8D4E1131D067D1F000AA11B /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		B803DC5C1C49F6060003F43D = {
 			isa = PBXGroup;
 			children = (
+				B8B411DE1E29092E003EB7E5 /* Playgrounds */,
 				B803DC671C49F6060003F43D /* SwiftPratices */,
 				B803DC7C1C49F6060003F43D /* SwiftPraticesTests */,
 				B803DC871C49F6060003F43D /* SwiftPraticesUITests */,
@@ -199,6 +201,14 @@
 				B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */,
 			);
 			path = DP;
+			sourceTree = "<group>";
+		};
+		B8B411DE1E29092E003EB7E5 /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				B8B411DF1E290B56003EB7E5 /* Strstr.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 		B8D4E1121D067C54000AA11B /* BinarySearch */ = {
