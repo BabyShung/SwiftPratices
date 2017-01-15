@@ -199,6 +199,7 @@ func search(_ nums: [Int], _ target: Int) -> Int {
     var start = 0, end = nums.count - 1
     while start + 1 < end {
         let mid = start + (end - start) / 2
+        //if we change it to "nums[mid] > nums[start]" and the rest same, it's also working
         if nums[mid] > nums[end] {
             if target >= nums[start] && target <= nums[mid]  {
                 end = mid
