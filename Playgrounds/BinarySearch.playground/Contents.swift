@@ -169,5 +169,24 @@ func findPeakElement(_ nums: [Int]) -> Int {
     }
 }
 
+//LEC 278
+func isBadVersion(_ n: Int) -> Int{
+    var start = 1, end = n
+    while start + 1 < end {
+        let mid = start + (end - start) / 2
+        if isBad(mid) {
+            end = mid
+        } else {
+            start = end
+        }
+    }
+    if isBad(start) {
+        return start
+    } else {
+        return end
+    }
+}
 
-
+private func isBad(_ n: Int) -> Bool {
+    return false
+}
