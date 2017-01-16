@@ -19,6 +19,8 @@
 		B82BAB781D0682FB003ECE7E /* BinarySearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */; };
 		B840EBE41D10FAD9008F8A40 /* SearchInsertPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B840EBE31D10FAD8008F8A40 /* SearchInsertPosition.swift */; };
 		B840EBE61D10FC0D008F8A40 /* SearchInsertPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B840EBE51D10FC0D008F8A40 /* SearchInsertPositionTests.swift */; };
+		B84E95361E2D6730009567BF /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E95351E2D6730009567BF /* Heap.swift */; };
+		B84E95381E2D673D009567BF /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84E95371E2D673D009567BF /* PriorityQueue.swift */; };
 		B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */; };
 		B869FE381C4F38E000DD7CE5 /* MinimumPathSumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */; };
 		B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */; };
@@ -71,6 +73,9 @@
 		B840EBE51D10FC0D008F8A40 /* SearchInsertPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInsertPositionTests.swift; sourceTree = "<group>"; };
 		B845219B1E29B55E00DDE38B /* BinarySearch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BinarySearch.playground; sourceTree = "<group>"; };
 		B845219C1E2BD2D700DDE38B /* subsetDFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = subsetDFS.playground; sourceTree = "<group>"; };
+		B84E95331E2D6692009567BF /* HeapPriorityQueue.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HeapPriorityQueue.playground; sourceTree = "<group>"; };
+		B84E95351E2D6730009567BF /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		B84E95371E2D673D009567BF /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
 		B869FE351C4F31C000DD7CE5 /* MinimumPathSum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSum.swift; sourceTree = "<group>"; };
 		B869FE371C4F38E000DD7CE5 /* MinimumPathSumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinimumPathSumTests.swift; sourceTree = "<group>"; };
 		B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePaths.swift; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 		B803DC961C49F6260003F43D /* Algo */ = {
 			isa = PBXGroup;
 			children = (
+				B84E95341E2D6728009567BF /* DataStructures */,
 				B8D4E1121D067C54000AA11B /* BinarySearch */,
 				B803DC971C49F6260003F43D /* DP */,
 			);
@@ -206,6 +212,15 @@
 			path = DP;
 			sourceTree = "<group>";
 		};
+		B84E95341E2D6728009567BF /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				B84E95371E2D673D009567BF /* PriorityQueue.swift */,
+				B84E95351E2D6730009567BF /* Heap.swift */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
 		B8B411DE1E29092E003EB7E5 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +228,7 @@
 				B845219B1E29B55E00DDE38B /* BinarySearch.playground */,
 				B80AEA2E1E2A8E2E00ACDD7D /* ReverseWords.playground */,
 				B845219C1E2BD2D700DDE38B /* subsetDFS.playground */,
+				B84E95331E2D6692009567BF /* HeapPriorityQueue.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
@@ -376,11 +392,13 @@
 				B869FE361C4F31C000DD7CE5 /* MinimumPathSum.swift in Sources */,
 				B8D10B571C65A62800BBDD6A /* ClimbingStairs.swift in Sources */,
 				B869FE4C1C50949300DD7CE5 /* UniquePaths.swift in Sources */,
+				B84E95381E2D673D009567BF /* PriorityQueue.swift in Sources */,
 				B803DC6B1C49F6060003F43D /* ViewController.swift in Sources */,
 				B89BA2461D123BAE00C3A078 /* Search2DMatrix.swift in Sources */,
 				B803DC691C49F6060003F43D /* AppDelegate.swift in Sources */,
 				B840EBE41D10FAD9008F8A40 /* SearchInsertPosition.swift in Sources */,
 				B87EA6471C62F60800C109F8 /* JumpGame.swift in Sources */,
+				B84E95361E2D6730009567BF /* Heap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

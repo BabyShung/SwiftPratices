@@ -311,6 +311,7 @@ private func combinationSum3Helper(_ res: inout [[Int]],
 
 //combinationSum3(2, 3)
 
+<<<<<<< HEAD
 func combinationSum4(_ nums: [Int], _ target: Int) -> Int {
     guard nums.count > 0 else {
         return 0
@@ -350,7 +351,7 @@ private func combinationSum4Helper(_ count: inout Int,
     }
 }
 
-combinationSum4([1, 2, 3], 4)
+//combinationSum4([1, 2, 3], 4)
 
 
 func permuteUnique(_ nums: [Int]) -> [[Int]] {
@@ -381,9 +382,3 @@ private func permuteUniqueHelper(_ res: inout [[Int]],
         }
     }
 }
-
-
-
-
-
-
