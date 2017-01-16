@@ -12,20 +12,21 @@ func subsets(_ nums: [Int]) -> [[Int]] {
     let sortedNums = nums.sorted()
     var container: [Int] = []
     var results: [[Int]] = []
-    dfsHelper(nums: sortedNums, index: 0, container: &container, results: &results)
+    dfsHelper(sortedNums, 0, &container, &results)
     return results
 }
 
-private func dfsHelper(nums:[Int],
-                       index: Int,
-                       container: inout [Int],
-                       results: inout [[Int]]) {
+private func dfsHelper(_ nums:[Int],
+                       _ pos: Int,
+                       _ container: inout [Int],
+                       _ results: inout [[Int]]) {
     results.append(container)
-    print("adding array: \(container)")
-    for i in stride(from: index, to: nums.count, by: 1) {
+    print("adding array: \(container), cur pos: \(pos)")
+    for i in stride(from: pos, to: nums.count, by: 1) {
         container.append(nums[i])
         print("current: \(container)")
-        dfsHelper(nums: nums, index: i + 1, container: &container, results: &results)
+        dfsHelper(nums, i + 1, &container, &results)
+        print("function returned - cur i: \(i), next i: \(i + 1)")
         container.removeLast()
     }
 }
@@ -40,30 +41,31 @@ func subsetsII(_ nums: [Int]) -> [[Int]] {
     let sortedNums = nums.sorted()
     var container: [Int] = []
     var results: [[Int]] = []
-    dfsHelperII(nums: sortedNums, index: 0, container: &container, results: &results)
+    dfsHelperII(sortedNums, 0, &container, &results)
     return results
 }
 
-private func dfsHelperII(nums:[Int],
-                       index: Int,
-                       container: inout [Int],
-                       results: inout [[Int]]) {
+private func dfsHelperII(_ nums:[Int],
+                         _ pos: Int,
+                         _ container: inout [Int],
+                         _ results: inout [[Int]]) {
 
     results.append(container)
-    print("adding array: \(container)")
-    for i in stride(from: index, to: nums.count, by: 1) {
-        guard i == index || nums[i] != nums[i - 1] else {
-            print("skip - i: \(i), index: \(index), nums[\(i)] = \(nums[i]), nums[\(i) - 1] = \(nums[i - 1])")
+    print("adding array: \(container), cur pos: \(pos)")
+    for i in stride(from: pos, to: nums.count, by: 1) {
+        guard i == pos || nums[i] != nums[i - 1] else {
+            print("skip - i: \(i), index: \(pos), nums[\(i)] = \(nums[i]), nums[\(i) - 1] = \(nums[i - 1])")
             continue
         }
         container.append(nums[i])
         print("current: \(container)")
-        dfsHelperII(nums: nums, index: i + 1, container: &container, results: &results)
+        dfsHelperII(nums, i + 1, &container, &results)
+        print("function returned - cur i: \(i), next i: \(i + 1)")
         container.removeLast()
     }
 }
 
-//subsetsII([1, 1, 2, 2])
+subsetsII([1, 1, 2, 2])
 
 
 //permutation
@@ -196,4 +198,4 @@ private func comDFSHelper2(_ candidates: inout [Int],
 }
 
 //[1, 1, 2, 5, 6, 7, 10]
-combinationSum2([10, 1, 2, 7, 6, 1, 5], 8)
+//combinationSum2([10, 1, 2, 7, 6, 1, 5], 8)
