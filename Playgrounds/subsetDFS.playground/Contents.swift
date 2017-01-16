@@ -141,20 +141,20 @@ private func permuteHelper(_ nums: [Int],
     if container.count == nums.count {
         res.append(container)
         OUTPUT_ADDING_ARR(container, -1)
-    }
-    for i in stride(from: 0, to: nums.count, by: 1) {
-        guard !container.contains(nums[i]) else {
-            OUTPUT_CONTINUE(i, -1, nums)
-            continue
+    } else {
+        for i in stride(from: 0, to: nums.count, by: 1) {
+            guard !container.contains(nums[i]) else {
+                OUTPUT_CONTINUE(i, -1, nums)
+                continue
+            }
+            container.append(nums[i])
+            OUTPUT_ADDING_ELEMENT(container, i, nums)
+            permuteHelper(nums, &res, &container)
+            container.removeLast()
+            OUTPUT_FUNCTION_RETURN(container, i)
         }
-        container.append(nums[i])
-        OUTPUT_ADDING_ELEMENT(container, i, nums)
-        permuteHelper(nums, &res, &container)
-        container.removeLast()
-        OUTPUT_FUNCTION_RETURN(container, i)
+        OUTPUT_END_FORLOOP()
     }
-    OUTPUT_END_FORLOOP()
-
 }
 
 //permute([1, 2])
@@ -351,3 +351,39 @@ private func combinationSum4Helper(_ count: inout Int,
 }
 
 combinationSum4([1, 2, 3], 4)
+
+
+func permuteUnique(_ nums: [Int]) -> [[Int]] {
+    guard nums.count > 0 else { return [] }
+    var res: [[Int]] = []
+    var container: [Int] = []
+    permuteUniqueHelper(&res, &container, nums.sorted(), 0)
+    return res
+}
+
+private func permuteUniqueHelper(_ res: inout [[Int]],
+                                 _ container: inout [Int],
+                                 _ nums: [Int],
+                                 _ start: Int) {
+    if container.count == nums.count {
+        res.append(container)
+    } else {
+        for i in stride(from: start, to: nums.count, by: 1) {
+            guard i == start || nums[i - 1] != nums[i] else {
+                continue
+            }
+            guard !container.contains(nums[i]) else {
+                continue
+            }
+            container.append(nums[i])
+            permuteUniqueHelper(&res, &container, nums, i)
+            container.removeLast()
+        }
+    }
+}
+
+
+
+
+
+
