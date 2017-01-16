@@ -134,11 +134,15 @@ func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {
     var sorted = candidates.sorted()
     var container: [Int] = []
     var res: [[Int]] = []
-    comDFSHelper(&sorted, target, res: &res, container: &container, index: 0)
+    comDFSHelper(&sorted, target, &res, &container, 0)
     return res
 }
 
-private func comDFSHelper(_ candidates: inout [Int], _ target: Int, res: inout [[Int]], container: inout [Int], index: Int) {
+private func comDFSHelper(_ candidates: inout [Int],
+                          _ target: Int,
+                          _ res: inout [[Int]],
+                          _ container: inout [Int],
+                          _ index: Int) {
     guard target >= 0 else {
         return
     }
@@ -149,10 +153,47 @@ private func comDFSHelper(_ candidates: inout [Int], _ target: Int, res: inout [
         for i in stride(from: index, to: candidates.count, by: 1) {
             container.append(candidates[i])
             print("current: \(container)")
-            comDFSHelper(&candidates, target - candidates[i], res: &res, container: &container , index: i)
+            comDFSHelper(&candidates, target - candidates[i], &res, &container , i)
             container.removeLast()
         }
     }
 }
 
 //combinationSum([2, 3, 6, 7], 7)
+
+
+//combination sum
+func combinationSum2(_ candidates: [Int], _ target: Int) -> [[Int]] {
+    guard candidates.count > 0 else {
+        return []
+    }
+    var sorted = candidates.sorted()
+    var container: [Int] = []
+    var res: [[Int]] = []
+    comDFSHelper2(&sorted, target, &res, &container, 0)
+    return res
+}
+
+private func comDFSHelper2(_ candidates: inout [Int],
+                          _ target: Int,
+                          _ res: inout [[Int]],
+                          _ container: inout [Int],
+                          _ index: Int) {
+    guard target >= 0 else {
+        return
+    }
+    if target == 0 {
+        res.append(container)
+        print("adding array: \(container)")
+    } else {
+        for i in stride(from: index, to: candidates.count, by: 1) {
+            container.append(candidates[i])
+            print("current: \(container)")
+            comDFSHelper2(&candidates, target - candidates[i], &res, &container , i + 1)
+            container.removeLast()
+        }
+    }
+}
+
+//[1, 1, 2, 5, 6, 7, 10]
+combinationSum2([10, 1, 2, 7, 6, 1, 5], 8)
