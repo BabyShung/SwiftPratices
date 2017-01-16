@@ -159,6 +159,42 @@ private func permuteHelper(_ nums: [Int],
 
 //permute([1, 2])
 
+func permuteV2(_ nums: [Int]) -> [[Int]] {
+    guard nums.count > 0 else {
+        return []
+    }
+    var res: [[Int]] = []
+    var container: [Int] = []
+    var visited = Array(repeating: false, count: nums.count)
+    permuteHelperV2(nums, &res, &container, &visited)
+    return res
+}
+
+private func permuteHelperV2(_ nums: [Int],
+                           _ res: inout [[Int]],
+                           _ container: inout [Int],
+                           _ visited: inout [Bool]) {
+    if container.count == nums.count {
+        res.append(container)
+        OUTPUT_ADDING_ARR(container, -1)
+    } else {
+        for i in stride(from: 0, to: nums.count, by: 1) {
+            if !visited[i] {
+                visited[i] = true
+                container.append(nums[i])
+                OUTPUT_ADDING_ELEMENT(container, i, nums)
+                permuteHelperV2(nums, &res, &container, &visited)
+                visited[i] = false
+                container.removeLast()
+                OUTPUT_FUNCTION_RETURN(container, i)
+            }
+        }
+        OUTPUT_END_FORLOOP()
+    }
+}
+
+//permuteV2([1, 1, 2])
+
 //combination
 func combine(_ n: Int, _ k: Int) -> [[Int]] {
 
@@ -311,74 +347,49 @@ private func combinationSum3Helper(_ res: inout [[Int]],
 
 //combinationSum3(2, 3)
 
-<<<<<<< HEAD
-func combinationSum4(_ nums: [Int], _ target: Int) -> Int {
-    guard nums.count > 0 else {
-        return 0
-    }
-    var count = 0
-    var container: [Int] = []
-    combinationSum4Helper(&count, &container, nums.sorted(), target, 0)
-    return count
-}
-
-private func combinationSum4Helper(_ count: inout Int,
-                             _ container: inout [Int],
-                             _ nums: [Int],
-                             _ target: Int,
-                             _ start: Int) {
-    if target == 0 {
-        count += 1
-        print("count: \(count)")
-        return
-    }
-    for i in stride(from: start, to: nums.count, by: 1) {
-        guard i == start || nums[i - 1] != nums[i] else {
-            OUTPUT_CONTINUE(i, start, nums)
-            continue
-        }
-        guard target >= nums[i] else {
-            OUTPUT_SUM_RETURN(container, target, i, nums)
-            return
-        }
- 
-        container.append(nums[i])
-        OUTPUT_ADDING_ELEMENT(container, i, nums)
-
-        combinationSum4Helper(&count, &container, nums, target - nums[i], i)
-        container.removeLast()
-        OUTPUT_SUM_REMOVED_RETURN(container, target, i, nums)
-    }
-}
-
-//combinationSum4([1, 2, 3], 4)
-
-
 func permuteUnique(_ nums: [Int]) -> [[Int]] {
-    guard nums.count > 0 else { return [] }
+    guard nums.count > 0 else {
+        return []
+    }
     var res: [[Int]] = []
     var container: [Int] = []
-    permuteUniqueHelper(&res, &container, nums.sorted(), 0)
+    var visited = Array(repeating: false, count: nums.count)
+    permuteUniqueHelper(nums.sorted(), &res, &container, &visited)
     return res
 }
 
-private func permuteUniqueHelper(_ res: inout [[Int]],
-                                 _ container: inout [Int],
-                                 _ nums: [Int],
-                                 _ start: Int) {
+private func permuteUniqueHelper(_ nums: [Int],
+                             _ res: inout [[Int]],
+                             _ container: inout [Int],
+                             _ visited: inout [Bool]) {
     if container.count == nums.count {
         res.append(container)
+        OUTPUT_ADDING_ARR(container, -1)
     } else {
-        for i in stride(from: start, to: nums.count, by: 1) {
-            guard i == start || nums[i - 1] != nums[i] else {
+        for i in stride(from: 0, to: nums.count, by: 1) {
+
+            guard !visited[i] && (i == 0 || nums[i - 1] != nums[i] || visited[i - 1]) else {
+                print("**continue** i: \(i)")
                 continue
             }
-            guard !container.contains(nums[i]) else {
-                continue
-            }
+           
+            //OR
+//            if visited[i] == true || ( i != 0 && nums[i] == nums[i - 1]
+//                && visited[i - 1] == false) {
+//                continue
+//            }
+            
+            visited[i] = true
             container.append(nums[i])
-            permuteUniqueHelper(&res, &container, nums, i)
+            OUTPUT_ADDING_ELEMENT(container, i, nums)
+            permuteUniqueHelper(nums, &res, &container, &visited)
             container.removeLast()
+            visited[i] = false
+            OUTPUT_FUNCTION_RETURN(container, i)
         }
+        OUTPUT_END_FORLOOP()
     }
 }
+
+
+permuteUnique([1, 1, 2])
