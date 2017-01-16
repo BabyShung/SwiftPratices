@@ -10,15 +10,15 @@ func subsets(_ nums: [Int]) -> [[Int]] {
     }
     
     let sortedNums = nums.sorted()
-    var current: [Int] = []
+    var container: [Int] = []
     var results: [[Int]] = []
-    dfsHelper(nums: sortedNums, index: 0, result: &current, results: &results)
+    dfsHelper(nums: sortedNums, index: 0, container: &container, results: &results)
     return results
 }
 
 private func dfsHelper(nums:[Int],
                        index: Int,
-                       result: inout [Int],
+                       container: inout [Int],
                        results: inout [[Int]]) {
     //[1, 2, 3]
     //[]
@@ -27,11 +27,11 @@ private func dfsHelper(nums:[Int],
     //[1, 2, 3]
     //
     
-    results.append(result)
+    results.append(container)
     for i in stride(from: index, to: nums.count, by: 1) {
-        result.append(nums[i])
-        dfsHelper(nums: nums, index: i + 1, result: &result, results: &results)
-        result.removeLast()
+        container.append(nums[i])
+        dfsHelper(nums: nums, index: i + 1, container: &container, results: &results)
+        container.removeLast()
     }
 }
 
@@ -41,18 +41,18 @@ func subsetsII(_ nums: [Int]) -> [[Int]] {
     }
     
     let sortedNums = nums.sorted()
-    var current: [Int] = []
+    var container: [Int] = []
     var results: [[Int]] = []
-    dfsHelperII(nums: sortedNums, index: 0, result: &current, results: &results)
+    dfsHelperII(nums: sortedNums, index: 0, container: &container, results: &results)
     return results
 }
 
 private func dfsHelperII(nums:[Int],
                        index: Int,
-                       result: inout [Int],
+                       container: inout [Int],
                        results: inout [[Int]]) {
 
-    results.append(result)
+    results.append(container)
     for i in stride(from: index, to: nums.count, by: 1) {
         guard i == index || nums[i] != nums[i - 1] else {
             continue
@@ -60,9 +60,9 @@ private func dfsHelperII(nums:[Int],
 //        if i != index && nums[i] == nums[i - 1] {
 //            continue
 //        }
-        result.append(nums[i])
-        dfsHelperII(nums: nums, index: i + 1, result: &result, results: &results)
-        result.removeLast()
+        container.append(nums[i])
+        dfsHelperII(nums: nums, index: i + 1, container: &container, results: &results)
+        container.removeLast()
     }
 }
 
