@@ -26,8 +26,11 @@ private func OUTPUT_END_FORLOOP() {
 }
 
 private func OUTPUT_CONTINUE(_ i: Int, _ start: Int, _ nums: [Int]) {
-    print("** continued - i: \(i), start: \(start), nums[\(i)] = \(nums[i]), nums[\(i - 1)] = \(nums[i - 1]) - next i: \(i + 1)")
-    //, nums[\(i) - 1] = \(nums[i - 1])
+    if nums.count > 0 {
+        print("** continued - i: \(i), start: \(start), nums[\(i)] = \(nums[i]), nums[\(i - 1)] = \(nums[i - 1]) - next i: \(i + 1)")
+    } else {
+        print("** continued - i: \(i), start: \(start), i = \(i), i - 1 = \(i - 1) - next i: \(i + 1)")
+    }
 }
 
 private func OUTPUT_I_START(_ i: Int, _ start: Int) {
@@ -40,7 +43,12 @@ private func OUTPUT_SUM_RETURN(_ container: [Int], _ target: Int, _ i: Int, _ ca
 }
 
 private func OUTPUT_SUM_REMOVED_RETURN(_ container: [Int], _ target: Int, _ i: Int, _ candidates: [Int]) {
-    print("function returned - removedLast: \(container), target: \(target), candidates[\(i)]: \(candidates[i])")
+    if candidates.count > 0 {
+        print("function returned - removedLast: \(container), target: \(target), candidates[\(i)]: \(candidates[i])")
+    } else {
+        print("function returned - removedLast: \(container), target: \(target), i: \(i)")
+    }
+    
 }
 /////////////
 
@@ -163,17 +171,17 @@ private func cmnHelper(_ res: inout [[Int]],
                        _ start: Int) {
     if container.count == k {
         res.append(container)
-        OUTPUT_ADDING_ARR(container, start)
+//        OUTPUT_ADDING_ARR(container, start)
         return
     }
     for i in stride(from: start, through: n, by: 1) {
         container.append(i)
-        OUTPUT_ADDING_ELEMENT(container, i, [])
+//        OUTPUT_ADDING_ELEMENT(container, i, [])
         cmnHelper(&res, &container, n, k, i + 1)
         container.removeLast()
-        OUTPUT_FUNCTION_RETURN(container, i)
+//        OUTPUT_FUNCTION_RETURN(container, i)
     }
-    OUTPUT_END_FORLOOP()
+//    OUTPUT_END_FORLOOP()
 }
 
 //combine(4, 2)
@@ -201,14 +209,14 @@ private func comDFSHelper(_ candidates: inout [Int],
     } else {
         for i in stride(from: start, to: candidates.count, by: 1) {
             guard target >= candidates[i] else {//since it's ascending
-                OUTPUT_SUM_RETURN(container, target, i, candidates)
+//                OUTPUT_SUM_RETURN(container, target, i, candidates)
                 return
             }
             container.append(candidates[i])
-            OUTPUT_ADDING_ELEMENT(container, i, candidates)
+//            OUTPUT_ADDING_ELEMENT(container, i, candidates)
             comDFSHelper(&candidates, target - candidates[i], &res, &container , i)
             container.removeLast()
-            OUTPUT_SUM_REMOVED_RETURN(container, target, i, candidates)
+//            OUTPUT_SUM_REMOVED_RETURN(container, target, i, candidates)
 
         }
     }
@@ -241,23 +249,57 @@ private func comDFSHelper2(_ candidates: inout [Int],
     } else {
         for i in stride(from: start, to: candidates.count, by: 1) {
             guard i == start || candidates[i] != candidates[i - 1] else {
-                OUTPUT_CONTINUE(i, start, candidates)
+//                OUTPUT_CONTINUE(i, start, candidates)
                 continue
             }
-            OUTPUT_I_START(i, start)
+//            OUTPUT_I_START(i, start)
             guard target >= candidates[i] else {//since it's ascending
                 OUTPUT_SUM_RETURN(container, target, i, candidates)
                 return
             }
             container.append(candidates[i])
-            OUTPUT_ADDING_ELEMENT(container, i, candidates)
+//            OUTPUT_ADDING_ELEMENT(container, i, candidates)
             comDFSHelper2(&candidates, target - candidates[i], &res, &container , i + 1)
             container.removeLast()
-            OUTPUT_SUM_REMOVED_RETURN(container, target, i, candidates)
+//            OUTPUT_SUM_REMOVED_RETURN(container, target, i, candidates)
 
         }
     }
 }
 
 //[1, 1, 2, 5, 6, 7, 10]
-combinationSum2([1, 1, 1, 5], 8)
+//combinationSum2([1, 1, 1, 5], 8)
+
+func combinationSum3(_ k: Int, _ n: Int) -> [[Int]] {
+    guard n > 0 && k >= 0 else {
+        return []
+    }
+    var res: [[Int]] = []
+    var container: [Int] = []
+    combinationSum3Helper(&res, &container, k, n, 1)
+    return res
+}
+
+private func combinationSum3Helper(_ res: inout [[Int]],
+                                   _ container: inout [Int],
+                                   _ k: Int,
+                                   _ target: Int,
+                                   _ start: Int) {
+    if target == 0 && container.count == k {
+        res.append(container)
+        OUTPUT_ADDING_ARR(container, start)
+    }
+    for i in stride(from: start, through: 9, by: 1) {
+        guard target >= i else {
+            OUTPUT_CONTINUE(i, start, [])
+            return //since it's sorted and ascending
+        }
+        container.append(i)
+        OUTPUT_ADDING_ELEMENT(container, i, [])
+        combinationSum3Helper(&res, &container, k, target - i, i + 1)
+        container.removeLast()
+        OUTPUT_SUM_REMOVED_RETURN(container, target, i, [])
+    }
+}
+
+//combinationSum3(2, 3)
