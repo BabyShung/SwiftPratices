@@ -311,43 +311,44 @@ private func combinationSum3Helper(_ res: inout [[Int]],
 
 //combinationSum3(2, 3)
 
-func combinationSum4(_ nums: [Int], _ target: Int) -> Int {
-    guard nums.count > 0 else {
-        return 0
-    }
-    var count = 0
-    var container: [Int] = []
-    combinationSum4Helper(&count, &container, nums.sorted(), target, 0)
-    return count
-}
-
-private func combinationSum4Helper(_ count: inout Int,
-                             _ container: inout [Int],
-                             _ nums: [Int],
-                             _ target: Int,
-                             _ start: Int) {
-    if target == 0 {
-        count += 1
-        print("count: \(count)")
-        return
-    }
-    for i in stride(from: start, to: nums.count, by: 1) {
-        guard i == start || nums[i - 1] != nums[i] else {
-            OUTPUT_CONTINUE(i, start, nums)
-            continue
-        }
-        guard target >= nums[i] else {
-            OUTPUT_SUM_RETURN(container, target, i, nums)
-            return
-        }
- 
-        container.append(nums[i])
-        OUTPUT_ADDING_ELEMENT(container, i, nums)
-
-        combinationSum4Helper(&count, &container, nums, target - nums[i], i)
-        container.removeLast()
-        OUTPUT_SUM_REMOVED_RETURN(container, target, i, nums)
-    }
-}
-
-combinationSum4([1, 2, 3], 4)
+//combinationSum4 should use DP to solve ***
+//func combinationSum4(_ nums: [Int], _ target: Int) -> Int {
+//    guard nums.count > 0 else {
+//        return 0
+//    }
+//    var count = 0
+//    var container: [Int] = []
+//    combinationSum4Helper(&count, &container, nums.sorted(), target, 0)
+//    return count
+//}
+//
+//private func combinationSum4Helper(_ count: inout Int,
+//                             _ container: inout [Int],
+//                             _ nums: [Int],
+//                             _ target: Int,
+//                             _ start: Int) {
+//    if target == 0 {
+//        count += 1
+//        print("count: \(count)")
+//        return
+//    }
+//    for i in stride(from: start, to: nums.count, by: 1) {
+//        guard i == start || nums[i - 1] != nums[i] else {
+//            OUTPUT_CONTINUE(i, start, nums)
+//            continue
+//        }
+//        guard target >= nums[i] else {
+//            OUTPUT_SUM_RETURN(container, target, i, nums)
+//            return
+//        }
+// 
+//        container.append(nums[i])
+//        OUTPUT_ADDING_ELEMENT(container, i, nums)
+//
+//        combinationSum4Helper(&count, &container, nums, target - nums[i], i)
+//        container.removeLast()
+//        OUTPUT_SUM_REMOVED_RETURN(container, target, i, nums)
+//    }
+//}
+//
+//combinationSum4([1, 2, 3], 4)
