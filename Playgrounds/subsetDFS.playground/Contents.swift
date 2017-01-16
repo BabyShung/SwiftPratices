@@ -4,6 +4,35 @@ import UIKit
 
 var str = "Hello, playground"
 
+private func OUTPUT_ADDING_ARR(_ container: [Int], _ pos: Int) {
+    print("adding list: \(container), pos: \(pos)")
+}
+
+private func OUTPUT_ADDING_ELEMENT(_ container: [Int], _ i: Int, _ nums: [Int]) {
+    if nums.count > 0 {
+        print("added: num[\(i)]: \(nums[i]), container: \(container), next i: \(i + 1)")
+    } else {
+        print("added: \(i), container: \(container), next i: \(i + 1)")
+    }
+}
+
+private func OUTPUT_FUNCTION_RETURN(_ container: [Int], _ i: Int) {
+    print("function returned - cur i: \(i), next i: \(i + 1), removedLast: \(container)")
+    
+}
+
+private func OUTPUT_END_FORLOOP() {
+    print("--- for loop done ---")
+}
+
+private func OUTPUT_CONTINUE(_ i: Int, _ pos: Int, _ nums: [Int]) {
+    print("** continued - i: \(i), pos: \(pos), nums[\(i)] = \(nums[i]) - next i: \(i + 1)")
+    //, nums[\(i) - 1] = \(nums[i - 1])
+}
+/////////////
+
+
+
 func subsets(_ nums: [Int]) -> [[Int]] {
     guard nums.count > 0 else {
         return []
@@ -24,16 +53,16 @@ private func dfsHelper(_ nums:[Int],
     print("adding array: \(container), cur pos: \(pos)")
     for i in stride(from: pos, to: nums.count, by: 1) {
         container.append(nums[i])
-        print("current: \(container)")
+        OUTPUT_ADDING_ELEMENT(container, i, nums)
         dfsHelper(nums, i + 1, &container, &results)
-        print("function returned - cur i: \(i), next i: \(i + 1)")
+        OUTPUT_FUNCTION_RETURN(container, i)
         container.removeLast()
     }
 }
 
 //subsets([1, 2, 3])
 
-func subsetsII(_ nums: [Int]) -> [[Int]] {
+func subsetsWithDup(_ nums: [Int]) -> [[Int]] {
     guard nums.count > 0 else {
         return []
     }
@@ -45,27 +74,29 @@ func subsetsII(_ nums: [Int]) -> [[Int]] {
     return results
 }
 
+
 private func dfsHelperII(_ nums:[Int],
                          _ pos: Int,
                          _ container: inout [Int],
                          _ results: inout [[Int]]) {
 
     results.append(container)
-    print("adding array: \(container), cur pos: \(pos)")
+    OUTPUT_ADDING_ARR(container, pos)
     for i in stride(from: pos, to: nums.count, by: 1) {
         guard i == pos || nums[i] != nums[i - 1] else {
-            print("skip - i: \(i), index: \(pos), nums[\(i)] = \(nums[i]), nums[\(i) - 1] = \(nums[i - 1])")
+            OUTPUT_CONTINUE(i, pos, nums)
             continue
         }
         container.append(nums[i])
-        print("current: \(container)")
+        OUTPUT_ADDING_ELEMENT(container, i, nums)
         dfsHelperII(nums, i + 1, &container, &results)
-        print("function returned - cur i: \(i), next i: \(i + 1)")
         container.removeLast()
+        OUTPUT_FUNCTION_RETURN(container, i)
     }
+    OUTPUT_END_FORLOOP()
 }
 
-subsetsII([1, 1, 2, 2])
+//subsetsWithDup([1, 1, 2, 2])
 
 
 //permutation
@@ -84,18 +115,21 @@ private func permuteHelper(_ nums: [Int],
                            _ container: inout [Int]) {
     if container.count == nums.count {
         res.append(container)
-//        print("adding array: \(container)")
+        OUTPUT_ADDING_ARR(container, -1)
     }
     for i in stride(from: 0, to: nums.count, by: 1) {
         guard !container.contains(nums[i]) else {
-//            print("skip - current: \(container)")
+            OUTPUT_CONTINUE(i, -1, nums)
             continue
         }
         container.append(nums[i])
-//        print("current: \(container)")
+        OUTPUT_ADDING_ELEMENT(container, i, nums)
         permuteHelper(nums, &res, &container)
         container.removeLast()
+        OUTPUT_FUNCTION_RETURN(container, i)
     }
+    OUTPUT_END_FORLOOP()
+
 }
 
 //permute([1, 2])
@@ -116,17 +150,20 @@ private func cmnHelper(_ res: inout [[Int]],
                        _ pos: Int) {
     if container.count == k {
         res.append(container)
-//        print("adding array: \(container)")
+        OUTPUT_ADDING_ARR(container, pos)
         return
     }
     for i in stride(from: pos, through: n, by: 1) {
         container.append(i)
+        OUTPUT_ADDING_ELEMENT(container, i, [])
         cmnHelper(&res, &container, n, k, i + 1)
         container.removeLast()
+        OUTPUT_FUNCTION_RETURN(container, i)
     }
+    OUTPUT_END_FORLOOP()
 }
 
-//combine(20, 1)
+combine(20, 1)
 
 //combination sum
 func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {
