@@ -27,9 +27,9 @@ private func OUTPUT_END_FORLOOP() {
 
 private func OUTPUT_CONTINUE(_ i: Int, _ start: Int, _ nums: [Int]) {
     if nums.count > 0 {
-        print("** continued - i: \(i), start: \(start), nums[\(i)] = \(nums[i]), nums[\(i - 1)] = \(nums[i - 1]) - next i: \(i + 1)")
+        print("**** continued - i: \(i), start: \(start), nums[\(i)] = \(nums[i]), nums[\(i - 1)] = \(nums[i - 1]) - next i: \(i + 1)")
     } else {
-        print("** continued - i: \(i), start: \(start), i = \(i), i - 1 = \(i - 1) - next i: \(i + 1)")
+        print("**** continued - i: \(i), start: \(start), i = \(i), i - 1 = \(i - 1) - next i: \(i + 1)")
     }
 }
 
@@ -39,7 +39,11 @@ private func OUTPUT_I_START(_ i: Int, _ start: Int) {
 }
 
 private func OUTPUT_SUM_RETURN(_ container: [Int], _ target: Int, _ i: Int, _ candidates: [Int]) {
-    print("return - no need to check ascending - container: \(container), target: \(target), candidates[\(i)]: \(candidates[i])")
+    if candidates.count > 0 {
+        print("return - no need to check ascending - container: \(container), target: \(target), candidates[\(i)]: \(candidates[i])")
+    } else {
+        print("return - no need to check ascending - container: \(container), target: \(target), i: \(i)")
+    }
 }
 
 private func OUTPUT_SUM_REMOVED_RETURN(_ container: [Int], _ target: Int, _ i: Int, _ candidates: [Int]) {
@@ -248,15 +252,17 @@ private func comDFSHelper2(_ candidates: inout [Int],
         OUTPUT_ADDING_ARR(container, start)
     } else {
         for i in stride(from: start, to: candidates.count, by: 1) {
+            guard target >= candidates[i] else {//since it's ascending
+                OUTPUT_SUM_RETURN(container, target, i, candidates)
+                return
+            }
+            
             guard i == start || candidates[i] != candidates[i - 1] else {
 //                OUTPUT_CONTINUE(i, start, candidates)
                 continue
             }
 //            OUTPUT_I_START(i, start)
-            guard target >= candidates[i] else {//since it's ascending
-                OUTPUT_SUM_RETURN(container, target, i, candidates)
-                return
-            }
+
             container.append(candidates[i])
 //            OUTPUT_ADDING_ELEMENT(container, i, candidates)
             comDFSHelper2(&candidates, target - candidates[i], &res, &container , i + 1)
@@ -292,6 +298,7 @@ private func combinationSum3Helper(_ res: inout [[Int]],
     for i in stride(from: start, through: 9, by: 1) {
         guard target >= i else {
             OUTPUT_CONTINUE(i, start, [])
+            OUTPUT_SUM_RETURN(container, target, i, [])
             return //since it's sorted and ascending
         }
         container.append(i)
@@ -303,3 +310,44 @@ private func combinationSum3Helper(_ res: inout [[Int]],
 }
 
 //combinationSum3(2, 3)
+
+func combinationSum4(_ nums: [Int], _ target: Int) -> Int {
+    guard nums.count > 0 else {
+        return 0
+    }
+    var count = 0
+    var container: [Int] = []
+    combinationSum4Helper(&count, &container, nums.sorted(), target, 0)
+    return count
+}
+
+private func combinationSum4Helper(_ count: inout Int,
+                             _ container: inout [Int],
+                             _ nums: [Int],
+                             _ target: Int,
+                             _ start: Int) {
+    if target == 0 {
+        count += 1
+        print("count: \(count)")
+        return
+    }
+    for i in stride(from: start, to: nums.count, by: 1) {
+        guard i == start || nums[i - 1] != nums[i] else {
+            OUTPUT_CONTINUE(i, start, nums)
+            continue
+        }
+        guard target >= nums[i] else {
+            OUTPUT_SUM_RETURN(container, target, i, nums)
+            return
+        }
+ 
+        container.append(nums[i])
+        OUTPUT_ADDING_ELEMENT(container, i, nums)
+
+        combinationSum4Helper(&count, &container, nums, target - nums[i], i)
+        container.removeLast()
+        OUTPUT_SUM_REMOVED_RETURN(container, target, i, nums)
+    }
+}
+
+combinationSum4([1, 2, 3], 4)
