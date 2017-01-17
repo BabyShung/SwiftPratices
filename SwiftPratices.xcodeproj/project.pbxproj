@@ -73,6 +73,9 @@
 		B840EBE51D10FC0D008F8A40 /* SearchInsertPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchInsertPositionTests.swift; sourceTree = "<group>"; };
 		B845219B1E29B55E00DDE38B /* BinarySearch.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BinarySearch.playground; sourceTree = "<group>"; };
 		B845219C1E2BD2D700DDE38B /* subsetDFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = subsetDFS.playground; sourceTree = "<group>"; };
+		B84842411E2DC7D1008F585A /* GraphBFSDFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = GraphBFSDFS.playground; path = Playgrounds/GraphBFSDFS.playground; sourceTree = SOURCE_ROOT; };
+		B84842441E2DC848008F585A /* Stack.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Stack.playground; sourceTree = "<group>"; };
+		B84842471E2DC8F4008F585A /* Queue.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Queue.playground; sourceTree = "<group>"; };
 		B84E95331E2D6692009567BF /* HeapPriorityQueue.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = HeapPriorityQueue.playground; sourceTree = "<group>"; };
 		B84E95351E2D6730009567BF /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
 		B84E95371E2D673D009567BF /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
@@ -224,6 +227,9 @@
 		B8B411DE1E29092E003EB7E5 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				B84842471E2DC8F4008F585A /* Queue.playground */,
+				B84842441E2DC848008F585A /* Stack.playground */,
+				B84842411E2DC7D1008F585A /* GraphBFSDFS.playground */,
 				B8B411DF1E290B56003EB7E5 /* Strstr.playground */,
 				B845219B1E29B55E00DDE38B /* BinarySearch.playground */,
 				B80AEA2E1E2A8E2E00ACDD7D /* ReverseWords.playground */,
