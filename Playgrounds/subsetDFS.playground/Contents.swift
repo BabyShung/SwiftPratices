@@ -4,11 +4,11 @@ import UIKit
 
 var str = "Hello, playground"
 
-private func OUTPUT_ADDING_ARR(_ container: [Int], _ start: Int) {
+private func OUTPUT_ADDING_ARR<T>(_ container: [T], _ start: Int) {
     print("adding list: \(container), start: \(start)")
 }
 
-private func OUTPUT_ADDING_ELEMENT(_ container: [Int], _ i: Int, _ nums: [Int]) {
+private func OUTPUT_ADDING_ELEMENT<T>(_ container: [T], _ i: Int, _ nums: [T]) {
     if nums.count > 0 {
         print("added: num[\(i)]: \(nums[i]), container: \(container), next i(start): \(i + 1)")
     } else {
@@ -16,7 +16,7 @@ private func OUTPUT_ADDING_ELEMENT(_ container: [Int], _ i: Int, _ nums: [Int]) 
     }
 }
 
-private func OUTPUT_FUNCTION_RETURN(_ container: [Int], _ i: Int) {
+private func OUTPUT_FUNCTION_RETURN<T>(_ container: [T], _ i: Int) {
     print("function returned - cur i: \(i), next i: \(i + 1), removedLast: \(container)")
     
 }
@@ -393,3 +393,64 @@ private func permuteUniqueHelper(_ nums: [Int],
 
 
 //permuteUnique([1, 1, 2])
+
+
+func partition(_ s: String) -> [[String]] {
+    
+    guard s.characters.count > 0 else {
+        return []
+    }
+    
+    var res: [[String]] = []
+    var container: [String] = []
+    partitionHelper(&res, &container, s, 0)
+    return res
+}
+
+private func partitionHelper(_ res: inout [[String]],
+                             _ container: inout [String],
+                             _ s: String,
+                             _ start: Int) {
+
+    if start == s.characters.count {
+        res.append(container)
+        OUTPUT_ADDING_ARR(container, start)
+
+        return
+    }
+    for i in stride(from: start + 1, through: s.characters.count, by: 1) {
+        let startIndex = s.index(s.startIndex, offsetBy: start)
+        let endIndex = s.index(s.startIndex, offsetBy: i)
+        let prefix = s.substring(with: startIndex ..< endIndex)
+        guard isPalindrome(prefix) else {
+            print("** Continue - not a palindrome: " + prefix)
+            continue
+        }
+        container.append(prefix)
+        print("added: i: \(i), prefix: \(prefix), container: \(container)")
+        partitionHelper(&res, &container, s, i)
+        container.removeLast()
+        OUTPUT_FUNCTION_RETURN(container, i)
+    }
+    OUTPUT_END_FORLOOP()
+}
+
+private func isPalindrome(_ s: String) -> Bool {
+    var start = 0, end = s.characters.count - 1
+    let arr = [Character](s.characters)
+    while (start < end) {
+        guard arr[start] == arr[end] else {
+            return false
+        }
+        start += 1
+        end -= 1
+    }
+    return true
+}
+
+partition("aab")
+
+//let s = "abc", start = 0
+//let startIndex = s.index(s.startIndex, offsetBy: start)
+//let endIndex = s.index(s.startIndex, offsetBy: start + 1)
+//let prefix = s.substring(with: startIndex ..< endIndex)
