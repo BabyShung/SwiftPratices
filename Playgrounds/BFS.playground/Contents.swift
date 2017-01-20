@@ -51,3 +51,33 @@ root.right = right1
 left1.left = left2
 left1.right = right2
 levelOrder(root)
+
+
+func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
+    var res: [[Int]] = []
+    guard let root = root else {
+        return res
+    }
+    var queue = [root]
+    var queueFromLeft = true
+    while !queue.isEmpty {
+        var container: [Int] = []
+        let size = queue.count
+        for _ in stride(from: 0, to: size, by: 1) {
+            let cur = queue.removeFirst()
+            container.append(cur.val)
+            if let left = cur.left {
+                queue.append(left)
+            }
+            if let right = cur.right {
+                queue.append(right)
+            }
+        }
+        if !queueFromLeft {
+            container.reverse()
+        }
+        queueFromLeft = !queueFromLeft
+        res.append(container)
+    }
+    return res
+}
