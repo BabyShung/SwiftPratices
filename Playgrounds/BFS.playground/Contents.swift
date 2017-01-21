@@ -204,4 +204,40 @@ let X: Character = "X"
 //print("xxxxxee")
 
 
+func numIslands(_ grid: [[Character]]) -> Int {
+    guard grid.count > 0 else {
+        return 0
+    }
+    var gridVar = grid
+    let rows = grid.count, cols = grid[0].count
+    var count = 0
+    for i in stride(from: 0, to: rows, by: 1) {
+        for j in stride(from: 0, to: cols, by: 1) {
+            //dfs
+            if (gridVar[i][j] == "1") {
+                count += 1
+                islandDFS(&gridVar, i, j)
+            }
+        }
+    }
+    return count
+}
+
+private func islandDFS(_ grid: inout [[Character]], _ i: Int, _ j: Int) {
+    
+    let rows = grid.count, cols = grid[0].count
+    guard i >= 0 && i < rows && j >= 0 && j < cols && grid[i][j] == "1" else {
+        return
+    }
+    grid[i][j] = "0"
+    let dx = [1, -1, 0, 0]
+    let dy = [0, 0, 1, -1]
+    for k in stride(from: 0, to: 4, by: 1) {
+        let x = dx[k] + i
+        let y = dy[k] + j
+        islandDFS(&grid, x, y)
+    }
+}
+
+
 
