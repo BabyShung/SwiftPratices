@@ -239,5 +239,60 @@ private func islandDFS(_ grid: inout [[Character]], _ i: Int, _ j: Int) {
     }
 }
 
+//BFS WTF!
+func numIslandsBFS(_ grid: [[Character]]) -> Int {
+    guard grid.count > 0 else {
+        return 0
+    }
+    var gridVar = grid
+    let rows = grid.count, cols = grid[0].count
+    var count = 0
+    var visited = Array(repeating: Array(repeating: 0, count: cols), count: rows)
+    for i in stride(from: 0, to: rows, by: 1) {
+        for j in stride(from: 0, to: cols, by: 1) {
+            //dfs
+            if (gridVar[i][j] == "1") {
+                count += 1
+                islandBFS(&gridVar, i, j, &visited)
+            }
+        }
+    }
+    return count
+}
+
+private func islandBFS(_ grid: inout [[Character]],
+                       _ i: Int,
+                       _ j: Int,
+                       _ visited: inout [[Int]]) {
+    
+    let rows = grid.count, cols = grid[0].count
+    var queue: [SRNode] = [SRNode(i, j)]
+    while !queue.isEmpty {
+        let cur = queue.removeFirst()
+        grid[cur.x][cur.y] = "0"
+        visited[cur.x][cur.y] = 1
+        
+        let dx = [1, -1, 0, 0]
+        let dy = [0, 0, 1, -1]
+        for k in stride(from: 0, to: 4, by: 1) {
+            let x = dx[k] + cur.x
+            let y = dy[k] + cur.y
+            guard x >= 0 && x < rows && y >= 0 && y < cols && grid[x][y] == "1" && visited[x][y] == 0 else {
+                continue
+            }
+            visited[x][y] = 1
+            queue.append(SRNode(x, y))
+        }
+    }
+}
+
+//var numIslandArr: [[Character]] = []
+//let numIslandSource = ["11111011111111101011","01111111111110111110","10111001101111111111","11110111111111111111","10011111111111111111","10111111011101110111","01111111111101101111","11111111111101111011","11111111110111111111","11111111111111111111","01111111011111111111","11111111111111111111","11111111111111111111","11111011111110111111","10111110111011110111","11111111111101111110","11111111111110111100","11111111111111111111","11111111111111111111","11111111111111111111"]
+//for str in numIslandSource {
+//    let charArr = [Character](str.characters)
+//    numIslandArr.append(charArr)
+//}
+//numIslandsBFS(numIslandArr)
+
 
 
