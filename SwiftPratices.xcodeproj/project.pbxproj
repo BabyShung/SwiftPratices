@@ -86,6 +86,7 @@
 		B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePathsTests.swift; sourceTree = "<group>"; };
 		B87EA6461C62F60800C109F8 /* JumpGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGame.swift; sourceTree = "<group>"; };
 		B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGameTests.swift; sourceTree = "<group>"; };
+		B88B387A1E3517CB00554609 /* TreeTraversal.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TreeTraversal.playground; sourceTree = "<group>"; };
 		B89BA2451D123BAE00C3A078 /* Search2DMatrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search2DMatrix.swift; sourceTree = "<group>"; };
 		B89BA2471D123FD600C3A078 /* Search2DMatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search2DMatrixTests.swift; sourceTree = "<group>"; };
 		B8B411DF1E290B56003EB7E5 /* Strstr.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Strstr.playground; sourceTree = "<group>"; };
@@ -237,6 +238,7 @@
 				B845219C1E2BD2D700DDE38B /* subsetDFS.playground */,
 				B84E95331E2D6692009567BF /* HeapPriorityQueue.playground */,
 				B83BF64D1E30F74000133EC2 /* BFS.playground */,
+				B88B387A1E3517CB00554609 /* TreeTraversal.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
