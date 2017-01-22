@@ -97,6 +97,22 @@ private func helperInorder(_ cur: TreeNode?, _ res: inout [Int]) {
     helperInorder(cur.right, &res)
 }
 
+func inorderTraversalIterative(_ root: TreeNode?) -> [Int] {
+    var stack = Stack<TreeNode>()
+    var res: [Int] = []
+    var cur = root
+    while !stack.isEmpty || cur != nil {
+        while cur != nil {
+            stack.push(cur!)
+            cur = cur!.left
+        }
+        cur = stack.pop()
+        res.append(cur!.val)
+        cur = cur!.right
+    }
+    return res
+}
+
 //postorder
 func postorderTraversal(_ root: TreeNode?) -> [Int] {
     var res: [Int] = []
