@@ -128,3 +128,34 @@ private func helperPost(_ cur: TreeNode?, _ res: inout [Int]) {
     helperPost(cur.right, &res)
     res.append(cur.val)
 }
+
+//98. Validate Binary Search Tree
+//TODO refactor
+func isValidBST(_ root: TreeNode?) -> Bool {
+    guard let root = root else {
+        return true
+    }
+    var stack = Stack<TreeNode>()
+    var parent: TreeNode? = nil
+    var cur: TreeNode? = root
+    while !stack.isEmpty || cur != nil {
+        while cur != nil {
+            stack.push(cur!)
+            cur = cur?.left
+        }
+        cur = stack.pop()
+        if parent != nil && parent!.val >= cur!.val{
+            return false
+        } else {
+            parent = cur
+        }
+        cur = cur?.right
+    }
+    return true
+}
+
+
+
+
+
+
