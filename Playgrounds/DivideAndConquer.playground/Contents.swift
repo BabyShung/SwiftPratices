@@ -35,3 +35,34 @@ func isBalancedHelper(_ root: TreeNode?) -> (Bool, Int) {
         return (true, 1 + max(leftTuple.1, rightTuple.1))
     }
 }
+
+//114. Flatten Binary Tree to Linked List QuestionEditorial Solution
+func flatten(_ root: TreeNode?) {
+    flattenHelper(root)
+}
+
+func flattenHelper (_ root: TreeNode?) -> TreeNode? {
+    guard let root = root else {
+        return nil
+    }
+    
+    let leftLast = flattenHelper(root.left)
+    let rightLast = flattenHelper(root.right)
+    
+    if leftLast != nil {
+        leftLast!.right = root.right
+        root.right = root.left
+        root.left = nil
+    }
+    
+    if rightLast != nil {
+        return rightLast
+    }
+    
+    if leftLast != nil {
+        return leftLast
+    }
+    
+    return root
+}
+
