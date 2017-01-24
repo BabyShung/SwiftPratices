@@ -66,3 +66,28 @@ func flattenHelper (_ root: TreeNode?) -> TreeNode? {
     return root
 }
 
+//minimum subtree
+func findSubtree(_ root: TreeNode?) {
+    return
+}
+
+func findSubtreeHelper(_ root: TreeNode?) -> (minRoot: TreeNode?, minSum: Int, sum: Int) {
+    guard let root = root else {
+        return (nil, Int.max, 0)
+    }
+    var leftRT = findSubtreeHelper(root.left)
+    var rightRT = findSubtreeHelper(root.right)
+    
+    let sum = leftRT.sum + rightRT.sum + root.val
+    let rootRT: (minRoot: TreeNode?, minSum: Int, sum: Int) = (root, sum, sum)
+    leftRT.sum = sum
+    rightRT.sum = sum
+    
+    if sum < leftRT.minSum && sum < rightRT.minSum {
+        return rootRT
+    } else if leftRT.minSum < rightRT.minSum {
+        return leftRT
+    } else {
+        return rightRT
+    }
+}
