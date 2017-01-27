@@ -67,8 +67,8 @@ func flattenHelper (_ root: TreeNode?) -> TreeNode? {
 }
 
 //minimum subtree
-func findSubtree(_ root: TreeNode?) {
-    return
+func findSubtree(_ root: TreeNode?) -> TreeNode? {
+    return findSubtreeHelper(root).minRoot
 }
 
 func findSubtreeHelper(_ root: TreeNode?) -> (minRoot: TreeNode?, minSum: Int, sum: Int) {
