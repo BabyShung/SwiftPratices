@@ -222,3 +222,41 @@ func search(_ nums: [Int], _ target: Int) -> Int {
         return -1
     }
 }
+
+func copyBooks(pages: [Int], k: Int) -> Int {
+    guard pages.count > 0 else {
+        return 0
+    }
+    
+    var total = 0, maxi = 0
+    for page in pages {
+        total += page
+        maxi = max(maxi, page)
+    }
+    var start = maxi, end = total
+    while start + 1 < end {
+        let mid = start + (end - start) / 2
+        if (countCopiers(pages, mid) > k) {
+            start = mid
+        } else {
+            end = mid
+        }
+    }
+    if countCopiers(pages, start) <= k {
+        return start
+    } else {
+        return end
+    }
+}
+
+private func countCopiers(_ pages: [Int], _ time: Int) -> Int {
+    var sum = 0, count = 0
+    for page in pages { // time is always >= page[0] since start is maxi
+        if page + sum > time {
+            count += 1
+            sum = 0
+        }
+        sum += page
+    }
+    return count
+}
