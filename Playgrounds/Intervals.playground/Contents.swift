@@ -27,3 +27,24 @@ func merge(_ intervals: [Interval]) -> [Interval] {
     res.append(last)
     return res
 }
+
+func insert(_ intervals: [Interval], _ newInterval: Interval) -> [Interval] {
+    guard intervals.count > 0 else {
+        return [newInterval]
+    }
+    var res: [Interval] = []
+    var i = 0
+    for cur in intervals {
+        if cur.end < newInterval.start {
+            i += 1
+            res.append(cur)
+        } else if cur.start > newInterval.end {
+            res.append(cur)
+        } else {
+            newInterval.start = min(newInterval.start, cur.start)
+            newInterval.end = max(newInterval.end, cur.end)
+        }
+    }
+    res.insert(newInterval, at: i)
+    return res
+}
