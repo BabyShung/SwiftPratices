@@ -52,3 +52,20 @@ func insert(_ intervals: [Interval], _ newInterval: Interval) -> [Interval] {
     res.insert(newInterval, at: i)
     return res
 }
+
+//https://leetcode.com/problems/meeting-rooms/
+func canAttendMeetings(_ intervals: [Interval]) -> Bool {
+    guard intervals.count > 0 else {
+        return true
+    }
+    let sorted = intervals.sorted { $0.start < $1.start }
+    var lastEnd = sorted[0].end
+    for i in stride(from: 1, to: sorted.count, by: 1) {
+        let cur = sorted[i]
+        if lastEnd > cur.start {
+            return false
+        }
+        lastEnd = max(lastEnd, cur.end)
+    }
+    return true
+}
