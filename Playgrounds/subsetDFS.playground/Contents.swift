@@ -415,7 +415,6 @@ private func partitionHelper(_ res: inout [[String]],
     if start == s.characters.count {
         res.append(container)
         OUTPUT_ADDING_ARR(container, start)
-
         return
     }
     for i in stride(from: start + 1, through: s.characters.count, by: 1) {
@@ -448,7 +447,7 @@ private func isPalindrome(_ s: String) -> Bool {
     return true
 }
 
-partition("aab")
+partition("aabb")
 
 //let s = "abc", start = 0
 //let startIndex = s.index(s.startIndex, offsetBy: start)
