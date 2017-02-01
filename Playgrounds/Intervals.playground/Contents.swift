@@ -1,4 +1,6 @@
 
+import UIKit
+
 public class Interval {
     public var start: Int
     public var end: Int
@@ -8,6 +10,7 @@ public class Interval {
     }
 }
 
+//http://www.lintcode.com/en/problem/merge-intervals/
 func merge(_ intervals: [Interval]) -> [Interval] {
     guard intervals.count > 0 else {
         return []
@@ -28,6 +31,7 @@ func merge(_ intervals: [Interval]) -> [Interval] {
     return res
 }
 
+//http://www.lintcode.com/en/problem/insert-interval/#
 func insert(_ intervals: [Interval], _ newInterval: Interval) -> [Interval] {
     guard intervals.count > 0 else {
         return [newInterval]
