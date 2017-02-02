@@ -25,3 +25,23 @@ func minSubArrayLen(_ s: Int, _ nums: [Int]) -> Int {
     }
     return res
 }
+
+func lengthOfLongestSubstring(_ s: String) -> Int {
+    guard s.characters.count > 0 else {
+        return 0
+    }
+    var hash = Set<Character>()
+    var j = 0, res = 0
+    let arr = [Character](s.characters)
+    for i in stride(from: 0, to: arr.count, by: 1) {
+        while j < arr.count && !hash.contains(arr[j]) {
+            hash.insert(arr[j])
+            res = max(res, j - i + 1)
+            j += 1
+        }
+        hash.remove(arr[i])
+    }
+    return res
+}
+
+
