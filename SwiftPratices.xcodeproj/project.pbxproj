@@ -86,6 +86,7 @@
 		B869FE4B1C50949300DD7CE5 /* UniquePaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePaths.swift; sourceTree = "<group>"; };
 		B869FE4D1C50978300DD7CE5 /* UniquePathsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniquePathsTests.swift; sourceTree = "<group>"; };
 		B87C38731E418B0400D0E426 /* StringArraySort.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StringArraySort.playground; sourceTree = "<group>"; };
+		B87C38741E42E13800D0E426 /* TwoPointers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TwoPointers.playground; sourceTree = "<group>"; };
 		B87EA6461C62F60800C109F8 /* JumpGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGame.swift; sourceTree = "<group>"; };
 		B87EA6481C62F78C00C109F8 /* JumpGameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JumpGameTests.swift; sourceTree = "<group>"; };
 		B88B387A1E3517CB00554609 /* TreeTraversal.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TreeTraversal.playground; sourceTree = "<group>"; };
@@ -245,6 +246,7 @@
 				B83BF6541E35963200133EC2 /* DivideAndConquer.playground */,
 				B8AB4BA31E417AB80043839B /* Intervals.playground */,
 				B87C38731E418B0400D0E426 /* StringArraySort.playground */,
+				B87C38741E42E13800D0E426 /* TwoPointers.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
