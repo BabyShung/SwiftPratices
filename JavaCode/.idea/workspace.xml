@@ -46,11 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LRU.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LRU.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LC/DataStructures/LRU.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-288">
               <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DP.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LC/DP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -88,6 +98,7 @@
         <option value="$PROJECT_DIR$/src/LC/Array.java" />
         <option value="$PROJECT_DIR$/src/LC/DataStructures.java" />
         <option value="$PROJECT_DIR$/src/LC/DataStructures/LRU.java" />
+        <option value="$PROJECT_DIR$/src/LC/DP.java" />
       </list>
     </option>
   </component>
@@ -510,6 +521,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-288">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LC/DP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
