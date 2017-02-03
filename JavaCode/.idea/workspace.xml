@@ -29,8 +29,8 @@
       <file leaf-file-name="SlidingWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LC/SlidingWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+            <state relative-caret-position="126">
+              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -48,6 +48,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/LC/SlidingWindow.java" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -391,8 +398,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LC/SlidingWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="126">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="51" />
           <folding />
         </state>
       </provider>
