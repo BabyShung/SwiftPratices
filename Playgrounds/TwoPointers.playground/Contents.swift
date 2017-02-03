@@ -44,4 +44,11 @@ func lengthOfLongestSubstring(_ s: String) -> Int {
     return res
 }
 
+/*
+ Partition
+ */
 
+//http://www.lintcode.com/en/problem/kth-largest-element/
+func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
+    
+}
