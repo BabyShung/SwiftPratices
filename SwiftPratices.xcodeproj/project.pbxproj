@@ -97,6 +97,8 @@
 		B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairs.swift; sourceTree = "<group>"; };
 		B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
 		B8D4E1131D067D1F000AA11B /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
+		B8EEBD9C1E463A55003A7A3C /* DP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP.playground; sourceTree = "<group>"; };
+		B8EEBD9D1E466F9C003A7A3C /* AddNumbers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AddNumbers.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,8 @@
 				B8AB4BA31E417AB80043839B /* Intervals.playground */,
 				B87C38731E418B0400D0E426 /* StringArraySort.playground */,
 				B87C38741E42E13800D0E426 /* TwoPointers.playground */,
+				B8EEBD9C1E463A55003A7A3C /* DP.playground */,
+				B8EEBD9D1E466F9C003A7A3C /* AddNumbers.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
