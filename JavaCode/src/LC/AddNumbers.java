@@ -5,6 +5,31 @@ package LC;
  */
 public class AddNumbers {
 
+    //Same code
+    //http://www.lintcode.com/en/problem/add-binary/
+    //https://leetcode.com/problems/add-strings/
+//**********************************************************************
+//    public String addBinary(String a, String b) {
+//        return addStringsShared(a, b, 2);
+//    }
+//    public String addStrings(String num1, String num2) {
+//        return addStringsShared(num1, num2, 10);
+//    }
+    public String addStringsShared(String num1, String num2, int delta) {
+        int i = num1.length() - 1, j = num2.length() - 1, carry = 0;
+        String res = "";
+        while (i >= 0 || j >= 0) {
+            if (i >= 0)
+                carry += num1.charAt(i--) - '0';
+            if (j >= 0)
+                carry += num2.charAt(j--) - '0';
+            res = (carry % delta) + res;
+            carry /= delta;
+        }
+        return carry > 0 ? "1" + res : res;
+    }
+    //**********************************************************************
+
     //http://www.lintcode.com/en/problem/add-binary/
     private int getValue(char cur) {
         return (int)(cur - '0');
@@ -101,5 +126,20 @@ public class AddNumbers {
             num /= 10;
         }
         return res == 0 ? 9 : res;
+    }
+
+    //https://leetcode.com/problems/add-strings/
+    public String addStrings(String num1, String num2) {
+        int i = num1.length() - 1, j = num2.length() - 1, carry = 0;
+        String res = "";
+        while (i >= 0 || j >= 0) {
+            if (i >= 0)
+                carry += num1.charAt(i--) - '0';
+            if (j >= 0)
+                carry += num2.charAt(j--) - '0';
+            res = (carry % 10) + res;
+            carry /= 10;
+        }
+        return carry > 0 ? "1" + res : res;
     }
 }
