@@ -75,7 +75,34 @@ public class AddNumbers {
     }
 
     //http://www.lintcode.com/en/problem/add-two-numbers/
-    public ListNode addLists(ListNode l1, ListNode l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        if (l1 == null && l2 == null) {
+            return null;
+        }
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+        int carry = 0;
+
+        while (l1 != null || l2 != null) {
+            if (l1 != null) {
+                carry += l1.val;
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                carry += l2.val;
+                l2 = l2.next;
+            }
+            cur.next = new ListNode(carry % 10);
+            cur = cur.next;
+            carry /= 10;
+        }
+        if (carry > 0) {
+            cur.next = new ListNode(carry);
+        }
+        return dummy.next;
+    }
+
+    public ListNode addListsSecondBest(ListNode l1, ListNode l2) {
         // write your code here
         if (l1 == null && l2 == null) {
             return null;
