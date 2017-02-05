@@ -3,7 +3,7 @@ package LC;
 /**
  * Created by haozheng on 2/3/17.
  */
-public class Graph {
+public class GraphBFS {
 
     //http://www.lintcode.com/en/problem/clone-graph/
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
@@ -126,5 +126,54 @@ public class Graph {
             }
         }
         return map;
+    }
+
+    http://www.lintcode.com/en/problem/course-schedule-ii/#
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
+        // Write your code here
+
+        int[] degree = new int[numCourses];
+        ArrayList<ArrayList<Integer>> edges = new ArrayList<>();
+
+        for (int i = 0; i < numCourses; i++) {
+            edges.add(new ArrayList<Integer>());
+        }
+
+        for (int i = 0; i < prerequisites.length; i++) {
+            degree[prerequisites[i][0]]++;
+            ArrayList<Integer> nodes = edges.get(prerequisites[i][1]);
+            nodes.add(prerequisites[i][0]);
+        }
+
+        Queue<Integer> queue = new LinkedList<>();
+        for (int i = 0; i < numCourses; i++) {
+            if (degree[i] == 0) {
+                queue.offer(i);
+            }
+        }
+
+        int count = 0;
+        int[] res = new int[numCourses];
+        while (!queue.isEmpty()) {
+            int course = queue.poll();
+            res[count] = course;
+            count++;
+
+            ArrayList<Integer> edge = edges.get(course);
+            for (int i = 0; i < edge.size(); i++) {
+                int pointer = edge.get(i);
+                degree[pointer]--;
+                if (degree[pointer] == 0) {
+                    queue.offer(pointer);
+                }
+
+            }
+        }
+
+        if (count == numCourses) {
+            return res;
+        } else {
+            return new int[0];
+        }
     }
 }
