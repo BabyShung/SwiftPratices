@@ -2,8 +2,6 @@
 
 import UIKit
 
-var str = "Hello, playground"
-
 //http://www.lintcode.com/en/problem/add-digits/
 func addDigits(_ num: Int) -> Int {
     var num = num
