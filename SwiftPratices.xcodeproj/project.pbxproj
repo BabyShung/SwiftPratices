@@ -99,6 +99,7 @@
 		B8D4E1131D067D1F000AA11B /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
 		B8EEBD9C1E463A55003A7A3C /* DP.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP.playground; sourceTree = "<group>"; };
 		B8EEBD9D1E466F9C003A7A3C /* AddNumbers.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = AddNumbers.playground; sourceTree = "<group>"; };
+		B8EEBD9E1E4953C2003A7A3C /* FB.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FB.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +252,7 @@
 				B87C38741E42E13800D0E426 /* TwoPointers.playground */,
 				B8EEBD9C1E463A55003A7A3C /* DP.playground */,
 				B8EEBD9D1E466F9C003A7A3C /* AddNumbers.playground */,
+				B8EEBD9E1E4953C2003A7A3C /* FB.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
