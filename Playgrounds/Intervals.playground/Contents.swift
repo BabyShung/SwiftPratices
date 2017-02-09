@@ -69,3 +69,43 @@ func canAttendMeetings(_ intervals: [Interval]) -> Bool {
     }
     return true
 }
+
+struct Point {
+    let time: Int, flag: Int
+    init(_ time: Int, _ flag: Int) {
+        self.time = time
+        self.flag = flag
+    }
+}
+
+func minMeetingRooms(_ intervals: [Interval]) -> Int {
+    var list: [Point] = []
+    for i in intervals {
+        list.append(Point(i.start, 1))
+        list.append(Point(i.end, 0))
+    }
+    
+    list.sort { (p1, p2) -> Bool in
+        if p1.time == p2.time {
+            return p1.flag - p2.flag < 0
+        } else {
+            return p1.time - p2.time < 0
+        }
+    }
+    
+    var count = 0, res = 0
+    for p in list {
+        if p.flag == 1 { //start
+            count += 1
+        } else {
+            count -= 1
+        }
+        res = max(count, res)
+    }
+    return res
+}
+
+
+
+
+

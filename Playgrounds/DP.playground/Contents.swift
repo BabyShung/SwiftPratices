@@ -81,3 +81,18 @@ private func isTwoDigits(_ a: Character, _ b: Character) -> Bool {
 //print(numDecodings("170"))
 //print("Int max: \(Int.max)")
 //print(numDecodings("6065812287883668764831544958683283296479682877898293612168136334983851946827579555449329483852397155"))
+
+//HR
+func rob(_ nums: [Int]) -> Int {
+    guard nums.count > 0 else {
+        return 0
+    }
+    var sum = Array(repeating: 0, count: nums.count + 1)
+    sum[1] = nums[0]
+    for i in stride(from: 2, through: nums.count, by: 1) {
+        sum[i] = max(sum[i - 1], sum[i - 2] + nums[i - 1])
+    }
+    return sum[nums.count]
+}
+
+
