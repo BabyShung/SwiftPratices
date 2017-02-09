@@ -27,7 +27,7 @@ extension String {
 }
 
 //https://leetcode.com/problems/decode-ways/
-func numDecodings(_ s: String) -> Int {
+func numDecodings2(_ s: String) -> Int {
     let len = s.characters.count
     guard len > 0 else {
         return 0
@@ -36,15 +36,12 @@ func numDecodings(_ s: String) -> Int {
     var dp = Array(repeating: 0, count: len + 1)
     dp[0] = 1
     dp[1] = isValid(s.substring(with: 0 ..< 1)) ? 1 : 0
-    print("Initial: \(dp)")
     for i in stride(from: 2, through: len, by: 1) {
         if isValid(s.substring(with: i - 1 ..< i)) {
             dp[i] += dp[i - 1]
-            print("one digit: \(dp) - cur index: \(i)")
         }
         if isValid(s.substring(with: i - 2 ..< i)) {
             dp[i] += dp[i - 2]
-            print("two digit: \(dp) - cur index: \(i)")
         }
     }
     return dp[len]
@@ -57,6 +54,30 @@ private func isValid(_ str: String) -> Bool {
     return code != 0 || (code >= 1 && code <= 26)
 }
 
-print(numDecodings("170"))
+func numDecodings(_ s: String) -> Int {
+    let arr = [Character](s.characters)
+    let len = arr.count
+    guard len > 0 else {
+        return 0
+    }
+    var count = Array(repeating: 0, count: len + 1)
+    count[0] = 1
+    count[1] = arr[0] != "0" ? 1 : 0
+    for i in stride(from: 2, through: len, by: 1) {
+        if arr[i - 1] != "0" {
+            count[i] = count[i - 1]
+        }
+        if isTwoDigits(arr[i - 2], arr[i - 1]) {
+            count[i] += count[i - 2]
+        }
+    }
+    return count[len]
+}
+
+private func isTwoDigits(_ a: Character, _ b: Character) -> Bool {
+    return a == "1" || a == "2" && b <= "6"
+}
+
+//print(numDecodings("170"))
 //print("Int max: \(Int.max)")
 //print(numDecodings("6065812287883668764831544958683283296479682877898293612168136334983851946827579555449329483852397155"))
