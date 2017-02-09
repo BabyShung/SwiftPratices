@@ -2,8 +2,6 @@
 
 import UIKit
 
-var str = "Hello, playground"
-
 func moveZeroes(_ nums: inout [Int]) {
     guard nums.count > 0 else {
         return
