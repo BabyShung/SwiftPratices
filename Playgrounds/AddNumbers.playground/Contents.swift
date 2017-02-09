@@ -34,4 +34,24 @@ func addDigits(_ num: Int) -> Int {
 //    return res == 0 ? 9 : res
 }
 
-addDigits(39)
+//addDigits(39)
+
+private func addStringsHelper(num1: String, num2: String, mod: Int) -> String {
+    let num1Arr = [Character](num1.characters)
+    let num2Arr = [Character](num2.characters)
+    var i = num1Arr.count, j = num2Arr.count
+    var carry = 0, res = ""
+    while i >= 0 || j >= 0 {
+        if i >= 0 {
+            carry += Int(String(num1Arr[i]))!
+            i -= 1
+        }
+        if j >= 0 {
+            carry += Int(String(num2Arr[j]))!
+            j -= 1
+        }
+        res = String(carry % mod) + res
+        carry /= mod
+    }
+    return carry > 0 ? "1" + res : res
+}
