@@ -67,6 +67,7 @@
 		B803DC8A1C49F6060003F43D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B803DC981C49F62E0003F43D /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		B803DC9C1C4A02730003F43D /* TriangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
+		B806372B1E4C0BD0006C7CB0 /* Anagram.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Anagram.playground; sourceTree = "<group>"; };
 		B80AEA2E1E2A8E2E00ACDD7D /* ReverseWords.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReverseWords.playground; sourceTree = "<group>"; };
 		B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		B83BF64D1E30F74000133EC2 /* BFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BFS.playground; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				B8EEBD9C1E463A55003A7A3C /* DP.playground */,
 				B8EEBD9D1E466F9C003A7A3C /* AddNumbers.playground */,
 				B8EEBD9E1E4953C2003A7A3C /* FB.playground */,
+				B806372B1E4C0BD0006C7CB0 /* Anagram.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
