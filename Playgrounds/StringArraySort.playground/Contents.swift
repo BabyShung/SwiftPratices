@@ -5,6 +5,7 @@ let lessThan20 = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Ei
 let tens = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
 let thousands = ["", "Thousand", "Million", "Billion"];
 
+//https://leetcode.com/problems/integer-to-english-words/
 func numberToWords(_ num: Int) -> String {
     guard num > 0 else {
         return "Zero"
@@ -32,4 +33,36 @@ private func numberToWordsHelper(_ num: Int) -> String {
     } else {
         return lessThan20[num / 100] + " Hundred " + numberToWordsHelper(num % 100)
     }
+}
+
+
+func isPalindrome(_ s: String) -> Bool {
+    guard s.characters.count > 0 else {
+        return true
+    }
+    
+    var start = 0, end = s.characters.count - 1
+    let arr = [Character](s.characters), len = arr.count
+    while start < end {
+        while start < len && !isCharValid(arr[start]) {
+            start += 1
+        }
+        if start == len {
+            return true
+        }
+        while end >= 0 && !isCharValid(arr[end]) {
+            end -= 1
+        }
+        if String(arr[start]).lowercased() == String(arr[end]).lowercased() {
+            start += 1
+            end -= 1
+        } else {
+            break
+        }
+    }
+    return end <= start
+}
+
+private func isCharValid(_ c: Character) -> Bool {
+    return c >= "0" && c <= "9" || c >= "a" && c <= "z" || c >= "A" && c <= "Z"
 }
