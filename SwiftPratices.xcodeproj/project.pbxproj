@@ -69,6 +69,7 @@
 		B803DC9C1C4A02730003F43D /* TriangleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleTests.swift; sourceTree = "<group>"; };
 		B806372B1E4C0BD0006C7CB0 /* Anagram.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Anagram.playground; sourceTree = "<group>"; };
 		B80AEA2E1E2A8E2E00ACDD7D /* ReverseWords.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ReverseWords.playground; sourceTree = "<group>"; };
+		B824135C1E4C1AE5002A692F /* KSum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = KSum.playground; sourceTree = "<group>"; };
 		B82BAB771D0682FB003ECE7E /* BinarySearchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTests.swift; sourceTree = "<group>"; };
 		B83BF64D1E30F74000133EC2 /* BFS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = BFS.playground; sourceTree = "<group>"; };
 		B83BF6541E35963200133EC2 /* DivideAndConquer.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DivideAndConquer.playground; sourceTree = "<group>"; };
@@ -255,6 +256,7 @@
 				B8EEBD9D1E466F9C003A7A3C /* AddNumbers.playground */,
 				B8EEBD9E1E4953C2003A7A3C /* FB.playground */,
 				B806372B1E4C0BD0006C7CB0 /* Anagram.playground */,
+				B824135C1E4C1AE5002A692F /* KSum.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
