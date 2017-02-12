@@ -49,6 +49,34 @@ func lengthOfLongestSubstring(_ s: String) -> Int {
  */
 
 //http://www.lintcode.com/en/problem/kth-largest-element/
-func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
-    
+//func findKthLargest(_ nums: [Int], _ k: Int) -> Int {
+//    
+//}
+
+//https://leetcode.com/problems/trapping-rain-water/
+func trap(_ height: [Int]) -> Int {
+    guard height.count > 0 else {
+        return 0
+    }
+    var left = 0, right = height.count - 1
+    var leftH = height[left], rightH = height[right]
+    var res = 0
+    while left < right {
+        if leftH < rightH {
+            left += 1
+            if leftH > height[left] {
+                res += leftH - height[left]
+            } else {
+                leftH = height[left]
+            }
+        } else {
+            right -= 1
+            if rightH > height[right] {
+                res += rightH - height[right]
+            } else {
+                rightH = height[right]
+            }
+        }
+    }
+    return res
 }
