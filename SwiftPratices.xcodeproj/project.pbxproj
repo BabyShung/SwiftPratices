@@ -96,6 +96,7 @@
 		B89BA2471D123FD600C3A078 /* Search2DMatrixTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search2DMatrixTests.swift; sourceTree = "<group>"; };
 		B8AB4BA31E417AB80043839B /* Intervals.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Intervals.playground; sourceTree = "<group>"; };
 		B8B411DF1E290B56003EB7E5 /* Strstr.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Strstr.playground; sourceTree = "<group>"; };
+		B8C7EC5B1E50FDE400A4D754 /* Parentheses.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Parentheses.playground; sourceTree = "<group>"; };
 		B8D10B561C65A62800BBDD6A /* ClimbingStairs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairs.swift; sourceTree = "<group>"; };
 		B8D10B581C65A8B500BBDD6A /* ClimbingStairsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimbingStairsTests.swift; sourceTree = "<group>"; };
 		B8D4E1131D067D1F000AA11B /* BinarySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearch.swift; sourceTree = "<group>"; };
@@ -238,6 +239,7 @@
 		B8B411DE1E29092E003EB7E5 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				B8C7EC5A1E50FDD600A4D754 /* Parentheses */,
 				B84842471E2DC8F4008F585A /* Queue.playground */,
 				B84842441E2DC848008F585A /* Stack.playground */,
 				B84842411E2DC7D1008F585A /* GraphBFSDFS.playground */,
@@ -259,6 +261,14 @@
 				B824135C1E4C1AE5002A692F /* KSum.playground */,
 			);
 			path = Playgrounds;
+			sourceTree = "<group>";
+		};
+		B8C7EC5A1E50FDD600A4D754 /* Parentheses */ = {
+			isa = PBXGroup;
+			children = (
+				B8C7EC5B1E50FDE400A4D754 /* Parentheses.playground */,
+			);
+			path = Parentheses;
 			sourceTree = "<group>";
 		};
 		B8D4E1121D067C54000AA11B /* BinarySearch */ = {
