@@ -453,3 +453,45 @@ partition("aabb")
 //let startIndex = s.index(s.startIndex, offsetBy: start)
 //let endIndex = s.index(s.startIndex, offsetBy: start + 1)
 //let prefix = s.substring(with: startIndex ..< endIndex)
+
+//http://www.lintcode.com/en/problem/letter-combinations-of-a-phone-number/
+func letterCombinations(_ digits: String) -> [String] {
+    guard digits.characters.count > 0 else {
+        return []
+    }
+    var res: [String] = []
+    var container = [Character]()
+    letterComHelper(&res, &container, [Character](digits.characters), getNumberDict())
+    return res
+}
+
+private func letterComHelper(_ res: inout [String],
+                             _ container: inout [Character],
+                             _ digits: [Character],
+                             _ map: [Character : [Character]]) {
+    if container.count == digits.count {
+        res.append(String(container))
+        return
+    }
+    let startChar = digits[container.count]
+    for cur in map[startChar]! {
+        container.append(cur)
+        letterComHelper(&res, &container, digits, map)
+        container.removeLast()
+    }
+}
+
+private func getNumberDict() -> [Character : [Character]] {
+    var dict: [Character : [Character]] = [:]
+    dict["0"] = []
+    dict["1"] = []
+    dict["2"] = ["a", "b", "c"]
+    dict["3"] = ["d", "e", "f"]
+    dict["4"] = ["g", "h", "i"]
+    dict["5"] = ["j", "k", "l"]
+    dict["6"] = ["m", "n", "o"]
+    dict["7"] = ["p", "q", "r", "s"]
+    dict["8"] = ["t", "u", "v"]
+    dict["9"] = ["w", "x", "y", "z"]
+    return dict
+}
