@@ -80,3 +80,32 @@ func trap(_ height: [Int]) -> Int {
     }
     return res
 }
+
+/***
+ TWO SUM
+ ***/
+
+//https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+    guard numbers.count > 0 else {
+        return []
+    }
+    var start = 0, end = numbers.count - 1
+    while start < end {
+        let sum = numbers[start] + numbers[end]
+        if sum == target {
+            return [start + 1, end + 1]
+        } else if sum > target {
+            end -= 1
+        } else {
+            start += 1
+        }
+    }
+    return []
+}
+
+
+
+
+
+
