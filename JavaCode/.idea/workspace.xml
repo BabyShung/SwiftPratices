@@ -49,25 +49,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TwoSumAndFollowup.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TwoSumAndFollowup.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LC/TwoPointers/Forward/TwoSumAndFollowup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="540">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddNumbers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LC/AddNumbers.java">
+      <file leaf-file-name="ThreeSum.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LC/TwoPointers/Forward/ThreeSum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-              <folding>
-                <element signature="e#1139#1140#0" expanded="false" />
-                <element signature="e#1178#1179#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="825">
+              <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,6 +162,7 @@
         <option value="$PROJECT_DIR$/src/LC/Strings/reverseWords.java" />
         <option value="$PROJECT_DIR$/src/LC/TwoPointers/Forward/FindAllAnagramsInAString.java" />
         <option value="$PROJECT_DIR$/src/LC/TwoPointers/Forward/TwoSumAndFollowup.java" />
+        <option value="$PROJECT_DIR$/src/LC/TwoPointers/Forward/ThreeSum.java" />
       </list>
     </option>
   </component>
@@ -619,14 +617,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LC/DP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LC/BinaryTree.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -1023,8 +1013,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LC/TwoPointers/Forward/TwoSumAndFollowup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="540">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LC/TwoPointers/Forward/ThreeSum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
           <folding />
         </state>
       </provider>
