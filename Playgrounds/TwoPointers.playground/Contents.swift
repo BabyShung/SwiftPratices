@@ -86,7 +86,7 @@ func trap(_ height: [Int]) -> Int {
  ***/
 
 //https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
-func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
+func twoSumSorted(_ numbers: [Int], _ target: Int) -> [Int] {
     guard numbers.count > 0 else {
         return []
     }
@@ -104,8 +104,22 @@ func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
     return []
 }
 
-
-
-
+//https://leetcode.com/problems/two-sum/
+func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+    guard nums.count > 0 else {
+        return []
+    }
+    var dict: [Int : Int] = [:]
+    for (i, element) in nums.enumerated() {
+        let key = target - element
+        guard let smallerIndex = dict[element] else {
+            dict[key] = i
+            continue
+        }
+        //exists
+        return [smallerIndex, i] //array Zero based
+    }
+    return []
+}
 
 
