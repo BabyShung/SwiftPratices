@@ -1,4 +1,4 @@
-package LC.DataStructures;
+package Categories.DataStructures;
 
 /**
  * Created by haozheng on 2/3/17.
@@ -8,6 +8,7 @@ class Node {
     Node next;
     int key;
     int val;
+
     public Node(int key, int val) {
         this.key = key;
         this.val = val;
