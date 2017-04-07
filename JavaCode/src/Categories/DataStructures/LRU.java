@@ -2,6 +2,9 @@ package Categories.DataStructures;
 
 /**
  * Created by haozheng on 2/3/17.
+ *
+ * https://leetcode.com/problems/lru-cache/#/description
+ *
  */
 class Node {
     Node prev;
