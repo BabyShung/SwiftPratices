@@ -1,13 +1,17 @@
-package LC.DataStructures;
+package Categories.DataStructures;
 
 /**
  * Created by haozheng on 2/3/17.
+ *
+ * https://leetcode.com/problems/lru-cache/#/description
+ *
  */
 class Node {
     Node prev;
     Node next;
     int key;
     int val;
+
     public Node(int key, int val) {
         this.key = key;
         this.val = val;
